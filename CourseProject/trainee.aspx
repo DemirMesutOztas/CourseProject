@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
         <div>
             <table>
-                <thead>
+             
                    <h3>Kursiyer Kayıt Ekranı</h3> 
-                </thead>
+                
                 <tbody>
                     <tr>
                         <td>Adı</td>
@@ -70,7 +70,7 @@
 
         </div>
         <p>
-            <asp:Button ID="user_kaydet" runat="server" Text="Kaydet" />
+            <asp:Button ID="user_kaydet" runat="server" Text="Kaydet" OnClick="user_kaydet_Click" />
         </p>
     </form>
 </body>
