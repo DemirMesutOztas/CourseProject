@@ -49,7 +49,7 @@
                         <td>
                             <asp:TextBox ID="t_txt_education" runat="server"></asp:TextBox>
                         </td>
-                    </tr
+                    </tr>
                 <tr>
                     <td>Şifre</td>
                     <td>
