@@ -60,6 +60,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>Açıklama</td>
+                        <td>
+                            <asp:TextBox ID="tr_txt_information" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>Şifre</td>
                         <td>
                             <asp:TextBox ID="tr_txt_password" runat="server" TextMode="Password"></asp:TextBox>
@@ -73,7 +79,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:FileUpload ID="FileUpload1" runat="server" />
+                            <asp:FileUpload ID="imgUpload" runat="server" />
                         </td>
                     </tr>
                      </tbody>
@@ -82,7 +88,7 @@
 
         </div>
         <p>
-            <asp:Button ID="teacher_kaydet" runat="server" Text="Kaydet" />
+            <asp:Button ID="teacher_kaydet" runat="server" Text="Kaydet" OnClick="teacher_kaydet_Click1" />
         </p>
     </form>
 </body>

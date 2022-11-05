@@ -96,6 +96,15 @@ namespace CourseProject
         protected global::System.Web.UI.WebControls.TextBox tr_txt_branch;
 
         /// <summary>
+        /// tr_txt_information control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tr_txt_information;
+
+        /// <summary>
         /// tr_txt_password control.
         /// </summary>
         /// <remarks>
@@ -114,13 +123,13 @@ namespace CourseProject
         protected global::System.Web.UI.WebControls.TextBox tr_txt_password2;
 
         /// <summary>
-        /// FileUpload1 control.
+        /// imgUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload imgUpload;
 
         /// <summary>
         /// teacher_kaydet control.
