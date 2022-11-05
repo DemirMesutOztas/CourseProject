@@ -67,17 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="trainee.aspx" />
+    <Content Include="student.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="trainee.aspx.cs">
-      <DependentUpon>trainee.aspx</DependentUpon>
+    <Compile Include="student.aspx.cs">
+      <DependentUpon>student.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="trainee.aspx.designer.cs">
-      <DependentUpon>trainee.aspx</DependentUpon>
+    <Compile Include="student.aspx.designer.cs">
+      <DependentUpon>student.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
