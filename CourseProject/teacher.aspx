@@ -15,7 +15,7 @@
 
                 <tbody>
                     <tr>
-                        <asp:Image ID="trImage" runat="server" Alt="Fotoğraf" />
+                        <asp:Image ID="trImage" runat="server" Alt="Fotoğraf"  />
                     </tr>
                     <tr>
                         <td>Adı</td>

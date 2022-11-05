@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -23,9 +24,17 @@ namespace CourseProject
             baglanti2.Open();
             SqlCommand gonder2 = new SqlCommand();
             gonder2.Connection = baglanti2;
+            
+            string strname;
+          
+            strname = imgUpload.FileName.ToString();
+            imgUpload.PostedFile.SaveAs(Server.MapPath("~/image/") + strname);
+            trImage.ImageUrl = "~/image/" + Path.GetFileName(imgUpload.FileName);
+
+
             gonder2.CommandText = "INSERT INTO trainer (name, surname, email,phone, age, education, branch, password, password_again, photo, information) VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text + "','" +
                                    tr_txt_phone.Text + "','" + tr_txt_age.Text + "','" + tr_txt_education.Text + "','" + tr_txt_branch.Text + "','" + tr_txt_password.Text + "','" +
-                                   tr_txt_password2.Text + "','" + imgUpload + "','" + tr_txt_information.Text + "')";
+                                   tr_txt_password2.Text + "','" + strname + "','" + tr_txt_information.Text + "')";
 
             gonder2.ExecuteNonQuery();
             baglanti2.Dispose();
