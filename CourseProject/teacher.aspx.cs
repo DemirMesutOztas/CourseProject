@@ -28,15 +28,17 @@ namespace CourseProject
             string strname;
           
             strname = imgUpload.FileName.ToString();
-            imgUpload.PostedFile.SaveAs(Server.MapPath("~/image/") + strname);
-            trImage.ImageUrl = "~/image/" + Path.GetFileName(imgUpload.FileName);
+            imgUpload.PostedFile.SaveAs(Server.MapPath("~/DemirMesutOztas/CourseProject/CourseProject/image") + strname);
+            trImage.ImageUrl = "~/DemirMesutOztas/CourseProject/CourseProject/image/" + Path.GetFileName(imgUpload.FileName);
 
 
-            gonder2.CommandText = "INSERT INTO trainer (name, surname, email,phone, age, education, branch, password, password_again, photo, information) VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text + "','" +
-                                   tr_txt_phone.Text + "','" + tr_txt_age.Text + "','" + tr_txt_education.Text + "','" + tr_txt_branch.Text + "','" + tr_txt_password.Text + "','" +
-                                   tr_txt_password2.Text + "','" + strname + "','" + tr_txt_information.Text + "')";
+            //gonder2.CommandText = "INSERT INTO trainer (name, surname, email,phone, age, education, branch, password, password_again, photo, information) VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text + "','" +
+            //                       tr_txt_phone.Text + "','" + tr_txt_age.Text + "','" + tr_txt_education.Text + "','" + tr_txt_branch.Text + "','" + tr_txt_password.Text + "','" +
+            //                       tr_txt_password2.Text + "','" + strname + "','" + tr_txt_information.Text + "')";
 
+            gonder2.CommandText = "SELECT * FROM trainer WHERE ID=1";
             gonder2.ExecuteNonQuery();
+            
             baglanti2.Dispose();
             baglanti2.Close();
         }
