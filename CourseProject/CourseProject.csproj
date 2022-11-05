@@ -79,13 +79,6 @@
     <Compile Include="student.aspx.designer.cs">
       <DependentUpon>student.aspx</DependentUpon>
     </Compile>
-    <Compile Include="trainer.aspx.cs">
-      <DependentUpon>trainer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="trainer.aspx.designer.cs">
-      <DependentUpon>trainer.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
