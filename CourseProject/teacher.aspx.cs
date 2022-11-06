@@ -25,11 +25,9 @@ namespace CourseProject
             SqlCommand gonder2 = new SqlCommand();
             gonder2.Connection = baglanti2;
             
-            string strname;
-          
-            strname = imgUpload.FileName.ToString();
-            imgUpload.PostedFile.SaveAs(Server.MapPath("~/DemirMesutOztas/CourseProject/CourseProject/image") + strname);
-            trImage.ImageUrl = "~/DemirMesutOztas/CourseProject/CourseProject/image/" + Path.GetFileName(imgUpload.FileName);
+            string strname = imgUpload.FileName.ToString();
+           // imgUpload.SaveAs(Server.MapPath("~/" + image + "/" + trImage.Filename);
+            //trImage.ImageUrl = "~/DemirMesutOztas//CourseProject/image/" + Path.GetFileName(imgUpload.FileName);
 
 
             //gonder2.CommandText = "INSERT INTO trainer (name, surname, email,phone, age, education, branch, password, password_again, photo, information) VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text + "','" +
