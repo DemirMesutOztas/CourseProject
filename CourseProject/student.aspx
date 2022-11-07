@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
         <div>
             <table>
-             
-                   <h3>Kursiyer Kayıt Ekranı</h3> 
-                
+
+                <h3>Kursiyer Kayıt Ekranı</h3>
+
                 <tbody>
                     <tr>
                         <td>Adı</td>
@@ -45,28 +45,34 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>Şehir</td>
+                        <td>
+                            <asp:TextBox ID="t_txt_city" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>Eğitim Durumu</td>
                         <td>
                             <asp:TextBox ID="t_txt_education" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                <tr>
-                    <td>Şifre</td>
-                    <td>
-                        <asp:TextBox ID="t_txt_password" runat="server" TextMode="Password"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Şifre Tekrar</td>
-                    <td>
-                        <asp:TextBox ID="t_txt_password2" runat="server" TextMode="Password"></asp:TextBox>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>Şifre</td>
+                        <td>
+                            <asp:TextBox ID="t_txt_password" runat="server" TextMode="Password"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Şifre Tekrar</td>
+                        <td>
+                            <asp:TextBox ID="t_txt_password2" runat="server" TextMode="Password"></asp:TextBox>
+                        </td>
+                    </tr>
                 </tbody>
 
             </table>
-            
-           
+
+
 
         </div>
         <p>

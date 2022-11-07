@@ -78,6 +78,15 @@ namespace CourseProject
         protected global::System.Web.UI.WebControls.TextBox tr_txt_age;
 
         /// <summary>
+        /// tr_txt_city control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tr_txt_city;
+
+        /// <summary>
         /// tr_txt_education control.
         /// </summary>
         /// <remarks>

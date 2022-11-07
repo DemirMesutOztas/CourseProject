@@ -15,7 +15,7 @@
 
                 <tbody>
                     <tr>
-                        <asp:Image ID="trImage" runat="server" Alt="Fotoğraf"  />
+                        <asp:Image ID="trImage" runat="server" Alt="Fotoğraf" />
                     </tr>
                     <tr>
                         <td>Adı</td>
@@ -47,42 +47,49 @@
                             <asp:TextBox ID="tr_txt_age" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Eğitim</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_education" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Branş</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_branch" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Açıklama</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_information" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Şifre</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_password" runat="server" TextMode="Password"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Şifre Tekrar</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_password2" runat="server" TextMode="Password"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:FileUpload ID="imgUpload" runat="server" />
-                        </td>
-                    </tr>
-                     </tbody>
+                    
+                        <tr>
+                            <td>Şehir</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_city" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Eğitim</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_education" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Branş</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_branch" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Açıklama</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_information" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Şifre</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_password" runat="server" TextMode="Password"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Şifre Tekrar</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_password2" runat="server" TextMode="Password"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:FileUpload ID="imgUpload" runat="server" />
+                            </td>
+                        </tr>
+                </tbody>
 
             </table>
 
