@@ -64,12 +64,21 @@
 
             <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" Height="221px" Width="607px" AutoGenerateColumns="False">
                 <Columns>
-                    <asp:BoundField DataField="photo" HeaderText="photo" SortExpression="photo" />
-                    <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
                     <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                     <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
                     <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+                    <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
                     <asp:BoundField DataField="information" HeaderText="information" SortExpression="information" />
+                    <asp:TemplateField HeaderText="Image">
+
+                      <ItemTemplate >
+
+                        <asp:BoundField DataField="photo" HeaderText="city" SortExpression="city" />
+
+                      </ItemTemplate>
+
+                    </asp:TemplateField>
+                   
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                 <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -81,8 +90,8 @@
                 <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [photo], [information] FROM [trainer]"></asp:SqlDataSource>
-
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [information], [photo] FROM [trainer]"></asp:SqlDataSource>
+                     
         </div>
     </form>
 </body>
