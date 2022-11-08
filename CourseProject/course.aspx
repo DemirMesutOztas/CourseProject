@@ -13,7 +13,7 @@
 
                 <h3>Kurslar</h3>
 
-                <tbody>
+<%--                <tbody>
                     <tr>
                         <td>
                             <asp:Image ID="trImage" runat="server" Alt="Fotoğraf"  ImageUrl="~/image/murat.jfif"/>
@@ -55,19 +55,23 @@
 
                     </tr>
 
-                </tbody>
+                </tbody>--%>
 
 
             </table>
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
-                <asp:BoundField DataField="photo" HeaderText="photo" SortExpression="photo" />
-                <asp:ImageField DataAlternateTextField="photo" DataImageUrlField="photo">
+                <asp:ImageField DataImageUrlField="photo">
                 </asp:ImageField>
+                <asp:BoundField DataField="branch" HeaderText="Branş" SortExpression="branch" />
+                <asp:BoundField DataField="name" HeaderText="İsim" SortExpression="name" />
+                <asp:BoundField DataField="surname" HeaderText="Soyisim" SortExpression="surname" />
+                <asp:BoundField DataField="information" HeaderText="Ders Tipi" SortExpression="information" />
+                <asp:BoundField DataField="city" HeaderText="Şehir" SortExpression="city" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo] FROM [trainer]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo], [name], [surname], [information], [city], [branch] FROM [trainer]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

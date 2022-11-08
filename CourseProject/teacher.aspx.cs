@@ -25,15 +25,15 @@ namespace CourseProject
             SqlCommand gonder2 = new SqlCommand();
             gonder2.Connection = baglanti2;
            
-            string fn = System.IO.Path.GetFileName(fileUpload1.PostedFile.FileName);
-            string saveLocation = Server.MapPath("image") + "\\" + fn;
+            string fn = "~/image/" + System.IO.Path.GetFileName(fileUpload1.PostedFile.FileName);
+            string saveLocation = Server.MapPath(".")  + System.IO.Path.GetFileName(fileUpload1.PostedFile.FileName);
 
             fileUpload1.PostedFile.SaveAs(saveLocation);
 
                         
             gonder2.CommandText = "INSERT INTO trainer (name, surname, email,phone, age, city, education, branch, password, password_again, photo, information) VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text + "','" +
                                  tr_txt_phone.Text + "','" + tr_txt_age.Text + "','" + tr_txt_city.Text + "','" + tr_txt_education.Text + "','" + tr_txt_branch.Text + "','" + tr_txt_password.Text + "','" +
-                                 tr_txt_password2.Text + "','" + saveLocation + "','" + tr_txt_information.Text + "')";
+                                 tr_txt_password2.Text + "','" + fn + "','" + tr_txt_information.Text + "')";
 
 
             gonder2.ExecuteNonQuery();
