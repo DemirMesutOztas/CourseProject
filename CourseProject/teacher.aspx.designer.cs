@@ -132,13 +132,13 @@ namespace CourseProject
         protected global::System.Web.UI.WebControls.TextBox tr_txt_password2;
 
         /// <summary>
-        /// imgUpload control.
+        /// fileUpload1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload imgUpload;
+        protected global::System.Web.UI.WebControls.FileUpload fileUpload1;
 
         /// <summary>
         /// teacher_kaydet control.

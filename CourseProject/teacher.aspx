@@ -86,7 +86,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:FileUpload ID="imgUpload" runat="server" />
+                                <asp:FileUpload ID="fileUpload1" runat="server" />
                             </td>
                         </tr>
                 </tbody>
