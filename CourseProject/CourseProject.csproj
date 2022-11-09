@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="course.aspx" />
     <Content Include="home.aspx" />
+    <Content Include="image\image.png" />
+    <Content Include="image\murat.jfif" />
     <Content Include="student.aspx" />
     <Content Include="teacher.aspx" />
     <Content Include="Web.config" />
@@ -113,9 +115,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="image\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
