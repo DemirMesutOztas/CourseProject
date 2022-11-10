@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 31px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -13,7 +18,7 @@
 
                 <h3>Kurslar</h3>
 
-<%--                <tbody>
+                <%--                <tbody>
                     <tr>
                         <td>
                             <asp:Image ID="trImage" runat="server" Alt="Fotoğraf"  ImageUrl="~/image/murat.jfif"/>
@@ -56,31 +61,45 @@
                     </tr>
 
                 </tbody>--%>
-
-
             </table>
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:ImageField DataImageUrlField="photo">
                 </asp:ImageField>
-                <asp:BoundField DataField="branch" HeaderText="Branş" SortExpression="branch" />
-                <asp:BoundField DataField="name" HeaderText="İsim" SortExpression="name" />
-                <asp:BoundField DataField="surname" HeaderText="Soyisim" SortExpression="surname" />
-                <asp:BoundField DataField="information" HeaderText="Ders Tipi" SortExpression="information" />
-                <asp:BoundField DataField="city" HeaderText="Şehir" SortExpression="city" />
+                <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
+                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
+                <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+                <asp:BoundField DataField="information" HeaderText="information" SortExpression="information" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo], [name], [surname], [information], [city], [branch] FROM [trainer]"></asp:SqlDataSource>
-        <asp:Calendar ID="Calendar1" runat="server" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px">
-            <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
-            <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
-            <OtherMonthDayStyle ForeColor="#CC9966" />
-            <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
-            <SelectorStyle BackColor="#FFCC66" />
-            <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
-            <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
-        </asp:Calendar>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [information], [photo] FROM [trainer]"></asp:SqlDataSource>
+       <div>
+           <table>
+
+            <tr>
+                <td class="auto-style1">Eğitmen Adı</td>
+                <td class="auto-style1">
+                    <asp:Label ID="egitmen" runat="server" Text="Eğitmen Adı"></asp:Label>
+                </td>
+            </tr>
+             <tr>
+                <td>Tarih</td>
+                <td>
+                    <asp:Label ID="tarih" runat="server" Text="Tarih"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>Ders Tipi</td>
+                <td>
+                    <asp:Label ID="derstipi" runat="server" Text="Ders Tipi"></asp:Label>
+                </td>
+            </tr>
+
+        </table>
+       </div>
+        
     </form>
 </body>
 </html>
