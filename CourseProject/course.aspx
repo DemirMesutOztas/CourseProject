@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-      
+       
     <title></title>
     <style type="text/css">
         .auto-style1 {
@@ -103,6 +103,14 @@
                         <asp:TextBox ID="tarihzaman" runat="server"></asp:TextBox>
                     </td>
 
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <asp:Button ID="rezKaydet" runat="server" Text="Rezervasyon Yap" />
+
+                    </td>
                 </tr>
             </table>
         </div>
