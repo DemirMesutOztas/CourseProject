@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
+      
     <title></title>
     <style type="text/css">
         .auto-style1 {
@@ -63,7 +65,7 @@
                 </tbody>--%>
             </table>
         </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
                 <asp:ImageField DataImageUrlField="photo">
                 </asp:ImageField>
@@ -75,31 +77,111 @@
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [information], [photo] FROM [trainer]"></asp:SqlDataSource>
-       <div>
-           <table>
 
-            <tr>
-                <td class="auto-style1">Eğitmen Adı</td>
-                <td class="auto-style1">
-                    <asp:Label ID="egitmen" runat="server" Text="Eğitmen Adı"></asp:Label>
-                </td>
-            </tr>
-             <tr>
-                <td>Tarih</td>
-                <td>
-                    <asp:Label ID="tarih" runat="server" Text="Tarih"></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td>Ders Tipi</td>
-                <td>
-                    <asp:Label ID="derstipi" runat="server" Text="Ders Tipi"></asp:Label>
-                </td>
-            </tr>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="ders" runat="server"></asp:TextBox>
 
-        </table>
-       </div>
-        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="egitmenadSoyad" runat="server"></asp:TextBox>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <asp:DropDownList ID="DropDownList1" runat="server" DataTextField="Ders Tipi"></asp:DropDownList>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="tarihzaman" runat="server"></asp:TextBox>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </form>
 </body>
 </html>
