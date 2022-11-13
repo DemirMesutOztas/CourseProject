@@ -31,17 +31,7 @@ namespace CourseProject
 
         protected void rezKaydet_Click(object sender, EventArgs e)
         {
-            baglanti2.Open();
-            SqlCommand gonder2 = new SqlCommand();
-            gonder2.Connection = baglanti2;
 
-            gonder2.CommandText = "INSERT INTO rezervation ( studentId, reservationDate, reservationTime) VALUES('" + GridView1.SelectedIndex + "','" + Calendar1.SelectedDayStyle + "','" + saat.SelectedValue + "','" + "')";
-
-
-            gonder2.ExecuteNonQuery();
-
-            baglanti2.Dispose();
-            baglanti2.Close();
         }
     }
 }

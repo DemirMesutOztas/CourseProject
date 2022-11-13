@@ -28,9 +28,8 @@ namespace CourseProject
         {
            
             baglanti.Open();
-            SqlCommand gonder = new SqlCommand("insert into trainee (name,surname,email,phone,age,city,education, password, password_again ) values('" + t_txt_adi.Text + "','" + t_txt_surname.Text 
+            SqlCommand gonder = new SqlCommand("insert into student (name,surname,email, password, password_again ) values('" + t_txt_adi.Text + "','" + t_txt_surname.Text 
                                                + "','" + t_txt_email.Text + "','" 
-                                               + t_txt_phone.Text + "','" + t_txt_age.Text + "','" + t_txt_education.Text + "','" + t_txt_education.Text + "','" 
                                                + t_txt_password.Text + "','" + t_txt_password2.Text +"')", baglanti);
             gonder.ExecuteNonQuery();
             baglanti.Dispose();

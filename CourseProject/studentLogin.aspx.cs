@@ -23,16 +23,18 @@ namespace CourseProject
             string kullanici = kullaniciAdi.Text;
             string sifre = kullaniciSifre.Text;
            
-            SqlCommand sorgula = new SqlCommand("SELECT * FROM Kullanicilar WHERE KullaniciAdi=@KullaniciAdi AND Sifre=@Sifre", baglan);
+            SqlCommand sorgula = new SqlCommand("SELECT * FROM student WHERE email=@email AND password=@password", baglan);
 
-            sorgula.Parameters.AddWithValue("@KullaniciAdi", kullanici);
-            sorgula.Parameters.AddWithValue("@Sifre", sifre);
+            sorgula.Parameters.AddWithValue("@email", kullanici);
+            sorgula.Parameters.AddWithValue("@password", sifre);
             baglan.Open();
             SqlDataReader oku = sorgula.ExecuteReader();
             if (oku.Read())
             {
-                Session["Kullanici"] = oku["KullaniciAdi"].ToString();
-                Response.Redirect("Default.aspx");
+                Session["studentId"] = oku["email"].ToString();
+               // lblBilgi.Text = oku["studentId"].ToString();
+                Response.Redirect("course.aspx");
+
             }
             else
                 lblBilgi.Text = "Kullanıcı adınızı ya da şifrenizi hatalı girdiniz!";

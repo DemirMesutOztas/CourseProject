@@ -32,30 +32,13 @@
                             <asp:TextBox ID="t_txt_email" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Telefon</td>
-                        <td>
-                            <asp:TextBox ID="t_txt_phone" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Yaş</td>
-                        <td>
-                            <asp:TextBox ID="t_txt_age" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
+                   <tr>
                         <td>Şehir</td>
                         <td>
                             <asp:TextBox ID="t_txt_city" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Eğitim Durumu</td>
-                        <td>
-                            <asp:TextBox ID="t_txt_education" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
+                   
                     <tr>
                         <td>Şifre</td>
                         <td>

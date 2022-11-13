@@ -51,24 +51,6 @@ namespace CourseProject
         protected global::System.Web.UI.WebControls.TextBox t_txt_email;
 
         /// <summary>
-        /// t_txt_phone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox t_txt_phone;
-
-        /// <summary>
-        /// t_txt_age control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox t_txt_age;
-
-        /// <summary>
         /// t_txt_city control.
         /// </summary>
         /// <remarks>
@@ -76,15 +58,6 @@ namespace CourseProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox t_txt_city;
-
-        /// <summary>
-        /// t_txt_education control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox t_txt_education;
 
         /// <summary>
         /// t_txt_password control.
