@@ -1,17 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="course.aspx.cs" Inherits="CourseProject.course" %>
 
+<%@ Register Assembly="DayPilot" Namespace="DayPilot.Web.Ui" TagPrefix="DayPilot" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-       
+
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            height: 31px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -79,6 +76,7 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [information], [photo] FROM [trainer]"></asp:SqlDataSource>
 
         <div>
+
             <table>
                 <tr>
                     <td>
@@ -94,13 +92,27 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" DataTextField="Ders Tipi"></asp:DropDownList>
+                        <asp:DropDownList ID="dersTipi" runat="server" DataTextField="Ders Tipi"></asp:DropDownList>
                     </td>
 
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="tarihzaman" runat="server"></asp:TextBox>
+
+                        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                    </td>
+
+                </tr>
+                 <tr>
+                    <td>
+
+                        <asp:DropDownList ID="saat" runat="server" DataTextField="Ders Tipi">
+                            <asp:ListItem>09.00</asp:ListItem>
+                            <asp:ListItem>10.00</asp:ListItem>
+                            <asp:ListItem>11.00</asp:ListItem>
+                            <asp:ListItem>12.00</asp:ListItem>
+                            <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList>
                     </td>
 
                 </tr>
@@ -108,86 +120,12 @@
                 <tr>
                     <td>
 
-                        <asp:Button ID="rezKaydet" runat="server" Text="Rezervasyon Yap" />
+                        <asp:Button ID="rezKaydet" runat="server" Text="Rezervasyon Yap" OnClick="rezKaydet_Click" />
 
                     </td>
                 </tr>
             </table>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </form>

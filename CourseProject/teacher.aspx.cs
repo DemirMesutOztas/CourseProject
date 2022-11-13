@@ -21,6 +21,7 @@ namespace CourseProject
 
         protected void teacher_kaydet_Click1(object sender, EventArgs e)
         {
+           
             baglanti2.Open();
             SqlCommand gonder2 = new SqlCommand();
             gonder2.Connection = baglanti2;
