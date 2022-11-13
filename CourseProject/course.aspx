@@ -64,16 +64,15 @@
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
+                <asp:BoundField DataField="branch" HeaderText="Branş" SortExpression="branch" />
+                <asp:BoundField DataField="name" HeaderText="Ad" SortExpression="name" />
+                <asp:BoundField DataField="surname" HeaderText="Soyad" SortExpression="surname" />
+                <asp:BoundField DataField="city" HeaderText="Şehir" SortExpression="city" />
                 <asp:ImageField DataImageUrlField="photo">
                 </asp:ImageField>
-                <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
-                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
-                <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
-                <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
-                <asp:BoundField DataField="information" HeaderText="information" SortExpression="information" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=dmo.database.windows.net;Initial Catalog=course;Persist Security Info=True;User ID=dmo;Password=demirfe06*" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [information], [photo] FROM [trainer]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [photo] FROM [trainer]"></asp:SqlDataSource>
 
         <div>
 
@@ -120,7 +119,7 @@
                 <tr>
                     <td>
 
-                        <asp:Button ID="rezKaydet" runat="server" Text="Rezervasyon Yap" OnClick="rezKaydet_Click" />
+                        <asp:Button ID="rezKaydet" runat="server" Text="Rezervasyon Yap" />
 
                     </td>
                 </tr>

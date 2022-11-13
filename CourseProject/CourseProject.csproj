@@ -75,6 +75,7 @@
     <Content Include="image\image.png" />
     <Content Include="image\murat.jfif" />
     <Content Include="student.aspx" />
+    <Content Include="studentLogin.aspx" />
     <Content Include="teacher.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -101,6 +102,13 @@
     </Compile>
     <Compile Include="student.aspx.designer.cs">
       <DependentUpon>student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="studentLogin.aspx.cs">
+      <DependentUpon>studentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="studentLogin.aspx.designer.cs">
+      <DependentUpon>studentLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="teacher.aspx.cs">
       <DependentUpon>teacher.aspx</DependentUpon>
