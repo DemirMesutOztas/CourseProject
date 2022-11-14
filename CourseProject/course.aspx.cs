@@ -11,27 +11,27 @@ namespace CourseProject
 {
     public partial class course : System.Web.UI.Page
     {
-        SqlConnection baglanti2 = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
+        SqlConnection baglan = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
+        
+
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ders.Text = GridView1.SelectedRow.Cells[1].Text;
-            egitmenadSoyad.Text = GridView1.SelectedRow.Cells[2].Text + " " + GridView1.SelectedRow.Cells[3].Text;
-            dersTipi.Items.Add("Online");
-            dersTipi.Items.Add("Yüzyüze");
-            //tarihzaman.Text = GridView1.SelectedRow.Cells[2].Text;
+            SqlCommand sorgula2 = new SqlCommand("INSERT INTO reservation (date, hour, lessonname) VALUES (@tarih, @saat, @ders)", baglan);
 
+            sorgula2.Parameters.AddWithValue("@ders", GridView1.SelectedRow.Cells[1].Text);
+            sorgula2.Parameters.AddWithValue("@tarih", GridView1.SelectedRow.Cells[6].Text);
+            sorgula2.Parameters.AddWithValue("@saat", GridView1.SelectedRow.Cells[7].Text);
+            baglan.Open();
+            sorgula2.ExecuteNonQuery();
 
-        }
-
-        protected void rezKaydet_Click(object sender, EventArgs e)
-        {
-
+            baglan.Close();
+            baglan.Dispose();
         }
     }
 }

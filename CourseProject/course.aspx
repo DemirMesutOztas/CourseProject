@@ -62,69 +62,50 @@
                 </tbody>--%>
             </table>
         </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
-                <asp:BoundField DataField="branch" HeaderText="Branş" SortExpression="branch" />
-                <asp:BoundField DataField="name" HeaderText="Ad" SortExpression="name" />
-                <asp:BoundField DataField="surname" HeaderText="Soyad" SortExpression="surname" />
-                <asp:BoundField DataField="city" HeaderText="Şehir" SortExpression="city" />
                 <asp:ImageField DataImageUrlField="photo">
                 </asp:ImageField>
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [name], [surname], [city], [branch], [photo] FROM [trainer]"></asp:SqlDataSource>
-
-        <div>
-
-            <table>
-                <tr>
-                    <td>
-                        <asp:TextBox ID="ders" runat="server"></asp:TextBox>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:TextBox ID="egitmenadSoyad" runat="server"></asp:TextBox>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-                        <asp:DropDownList ID="dersTipi" runat="server" DataTextField="Ders Tipi"></asp:DropDownList>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-
-                        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-                    </td>
-
-                </tr>
-                 <tr>
-                    <td>
-
-                        <asp:DropDownList ID="saat" runat="server" DataTextField="Ders Tipi">
+                <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
+                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
+                <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+                <asp:TemplateField HeaderText="Ders Tipi">
+                    <ItemTemplate>
+                        <asp:DropDownList ID="dersTipi" runat="server">
+                            <asp:ListItem>Online</asp:ListItem>
+                            <asp:ListItem>Yüz yüze</asp:ListItem>
+                        </asp:DropDownList>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Tarih">
+                    <ItemTemplate>
+                        <asp:TextBox ID="tarih" runat="server" type="date"></asp:TextBox>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Saat">
+                    <ItemTemplate>
+                        <asp:DropDownList ID="saat" runat="server">
                             <asp:ListItem>09.00</asp:ListItem>
                             <asp:ListItem>10.00</asp:ListItem>
                             <asp:ListItem>11.00</asp:ListItem>
                             <asp:ListItem>12.00</asp:ListItem>
-                            <asp:ListItem></asp:ListItem>
+                            <asp:ListItem>13.00</asp:ListItem>
+                            <asp:ListItem>14.00</asp:ListItem>
+                            <asp:ListItem>15.00</asp:ListItem>
+                            <asp:ListItem>16.00</asp:ListItem>
+                            <asp:ListItem>17.00</asp:ListItem>
+                            <asp:ListItem>18.00</asp:ListItem>
                         </asp:DropDownList>
-                    </td>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:ButtonField CommandName="Select" Text="Rezervasyon Yap" />
 
-                </tr>
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo], [branch], [name], [surname], [city] FROM [teacher]"></asp:SqlDataSource>
 
-                <tr>
-                    <td>
-
-                        <asp:Button ID="rezKaydet" runat="server" Text="Rezervasyon Yap" />
-
-                    </td>
-                </tr>
-            </table>
-        </div>
+       
 
 
     </form>
