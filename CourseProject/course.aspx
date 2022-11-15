@@ -70,7 +70,14 @@
                 <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                 <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
                 <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
-                <asp:BoundField DataField="teacherId" HeaderText="teacherId" InsertVisible="True" ReadOnly="True" SortExpression="teacherId" Visible="True" />
+                <asp:TemplateField HeaderText="teacherId" SortExpression="teacherId" Visible="False">
+                    <EditItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("teacherId") %>'></asp:Label>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="trid" runat="server" Text='<%# Bind("teacherId") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Ders Tipi">
                     <ItemTemplate>
                         <asp:DropDownList ID="dersTipi" runat="server" autopostback ="false">
