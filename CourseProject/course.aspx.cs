@@ -22,11 +22,23 @@ namespace CourseProject
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand sorgula2 = new SqlCommand("INSERT INTO reservation (date, hour, lessonname) VALUES (@tarih, @saat, @ders)", baglan);
+            SqlCommand sorgula2 = new SqlCommand("INSERT INTO reservation ( date, hour, lessonname) VALUES ( @tarih, @saat, @ders)", baglan);
+
+            var trh = GridView1.SelectedRow.FindControl("tarih") as TextBox;
+            string trh2 = trh.Text;
+
+            var st = GridView1.SelectedRow.FindControl("saat") as DropDownList;
+            string st2 = st.SelectedItem.Value;
+
+            string id = GridView1.SelectedRow.Cells[5].Text;
+            Label1.Text = "Merhaba" + id;
+          
 
             sorgula2.Parameters.AddWithValue("@ders", GridView1.SelectedRow.Cells[1].Text);
-            sorgula2.Parameters.AddWithValue("@tarih", GridView1.SelectedRow.Cells[6].Text);
-            sorgula2.Parameters.AddWithValue("@saat", GridView1.SelectedRow.Cells[7].Text);
+            sorgula2.Parameters.AddWithValue("@tarih", trh2 );
+            sorgula2.Parameters.AddWithValue("@saat", st2);
+            //sorgula2.Parameters.AddWithValue("@teacher",id2 );
+            //sorgula2.Parameters.AddWithValue("@student", id2);
             baglan.Open();
             sorgula2.ExecuteNonQuery();
 

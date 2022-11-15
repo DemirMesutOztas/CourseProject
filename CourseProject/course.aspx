@@ -70,9 +70,10 @@
                 <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                 <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
                 <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+                <asp:BoundField DataField="teacherId" HeaderText="teacherId" InsertVisible="True" ReadOnly="True" SortExpression="teacherId" Visible="True" />
                 <asp:TemplateField HeaderText="Ders Tipi">
                     <ItemTemplate>
-                        <asp:DropDownList ID="dersTipi" runat="server">
+                        <asp:DropDownList ID="dersTipi" runat="server" autopostback ="false">
                             <asp:ListItem>Online</asp:ListItem>
                             <asp:ListItem>Yüz yüze</asp:ListItem>
                         </asp:DropDownList>
@@ -103,7 +104,12 @@
 
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo], [branch], [name], [surname], [city] FROM [teacher]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo], [branch], [name], [surname], [city], [teacherId] FROM [teacher]"></asp:SqlDataSource>
+
+       
+
+
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
        
 
