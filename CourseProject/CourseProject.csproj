@@ -76,6 +76,7 @@
     <Content Include="image\murat.jfif" />
     <Content Include="student.aspx" />
     <Content Include="studentLogin.aspx" />
+    <Content Include="styles\home.css" />
     <Content Include="teacher.aspx" />
     <Content Include="teacherLogin.aspx" />
     <Content Include="Web.config" />
