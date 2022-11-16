@@ -31,8 +31,8 @@ namespace CourseProject
             SqlDataReader oku = sorgula.ExecuteReader();
             if (oku.Read())
             {
-                Session["studentId"] = oku["email"].ToString();
-               // lblBilgi.Text = oku["studentId"].ToString();
+                Session["studentId"] = oku["studentId"].ToString();
+                lblBilgi.Text = oku["studentId"].ToString();
                 Response.Redirect("course.aspx");
 
             }

@@ -34,6 +34,7 @@ namespace CourseProject
             gonder.ExecuteNonQuery();
             baglanti.Dispose();
             baglanti.Close();
+            Response.Redirect("teacherLogin.aspx");
 
         }
     }

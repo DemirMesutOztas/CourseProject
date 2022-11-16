@@ -35,12 +35,7 @@
                             <asp:TextBox ID="tr_txt_email" runat="server"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Telefon</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_phone" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
+                  
                     <tr>
                         <td>Yaş</td>
                         <td>
