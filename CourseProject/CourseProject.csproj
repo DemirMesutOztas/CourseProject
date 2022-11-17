@@ -70,13 +70,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\favicon.ico" />
+    <Content Include="assets\img\bg-masthead.jpg" />
+    <Content Include="assets\img\bg-showcase-1.jpg" />
+    <Content Include="assets\img\bg-showcase-2.jpg" />
+    <Content Include="assets\img\bg-showcase-3.jpg" />
+    <Content Include="assets\img\testimonials-1.jpg" />
+    <Content Include="assets\img\testimonials-2.jpg" />
+    <Content Include="assets\img\testimonials-3.jpg" />
     <Content Include="course.aspx" />
+    <Content Include="css\styles.css" />
     <Content Include="home.aspx" />
     <Content Include="image\image.png" />
     <Content Include="image\murat.jfif" />
+    <Content Include="js\scripts.js" />
     <Content Include="student.aspx" />
     <Content Include="studentLogin.aspx" />
-    <Content Include="styles\home.css" />
     <Content Include="teacher.aspx" />
     <Content Include="teacherLogin.aspx" />
     <Content Include="Web.config" />
