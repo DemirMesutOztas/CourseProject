@@ -80,7 +80,7 @@
     <Content Include="assets\img\testimonials-3.jpg" />
     <Content Include="course.aspx" />
     <Content Include="css\main.css" />
-    <Content Include="homepage.aspx" />
+    <Content Include="home.aspx" />
     <Content Include="image\image.png" />
     <Content Include="image\murat.jfif" />
     <Content Include="js\scripts.js" />
@@ -98,12 +98,12 @@
     <Compile Include="course.aspx.designer.cs">
       <DependentUpon>course.aspx</DependentUpon>
     </Compile>
-    <Compile Include="homepage.aspx.cs">
-      <DependentUpon>homepage.aspx</DependentUpon>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="homepage.aspx.designer.cs">
-      <DependentUpon>homepage.aspx</DependentUpon>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
