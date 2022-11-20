@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage2.aspx.cs" Inherits="CourseProject.homepage2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="CourseProject.homepage2" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
         }
 
         body {
-            font-size: 14px;
+            font-size: 20px;
         }
 
         .v1_2 {
@@ -60,7 +60,7 @@
             left: 28px;
             font-family: Cabin;
             font-weight: 600;
-            font-size: 36px;
+            font-size: 20px;
             opacity: 1;
             text-align: center;
         }
@@ -109,7 +109,7 @@
             font-weight: 600;
             font-size: 20px;
             opacity: 1;
-            text-align: center;
+            text-align: left;
         }
 
         .v10_2 {
@@ -120,9 +120,9 @@
             left: 46px;
             font-family: Cabin;
             font-weight: 600;
-            font-size: 32px;
+            font-size: 20px;
             opacity: 1;
-            text-align: center;
+            text-align: left;
         }
 
         .v1_52 {
@@ -133,7 +133,7 @@
             left: 55px;
             font-family: Cabin;
             font-weight: 400;
-            font-size: 24px;
+            font-size: 20px;
             opacity: 1;
             text-align: center;
         }
@@ -146,7 +146,7 @@
             left: 50px;
             font-family: Cabin;
             font-weight: 400;
-            font-size: 24px;
+            font-size: 20px;
             opacity: 1;
             text-align: center;
         }
@@ -204,7 +204,7 @@
             left: 180px;
             font-family: Cabin;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 20px;
             opacity: 1;
             text-align: center;
         }
@@ -217,9 +217,9 @@
             left: 48px;
             font-family: Cabin;
             font-weight: 300;
-            font-size: 24px;
+            font-size: 20px;
             opacity: 1;
-            text-align: center;
+            text-align: left;
         }
 
         .v12_3 {
@@ -270,7 +270,7 @@
             left: 63px;
             font-family: Cabin;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 20px;
             opacity: 1;
             text-align: center;
         }
@@ -312,7 +312,7 @@
             left: 54px;
             font-family: Cabin;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 20px;
             opacity: 1;
             text-align: center;
         }
@@ -366,7 +366,7 @@
             left: 64px;
             font-family: Cabin;
             font-weight: 600;
-            font-size: 32px;
+            font-size: 20px;
             opacity: 1;
             text-align: center;
         }
