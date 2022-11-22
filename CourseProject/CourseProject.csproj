@@ -82,6 +82,7 @@
     <Content Include="css\main.css" />
     <Content Include="home.aspx" />
     <Content Include="home2.aspx" />
+    <Content Include="home3.aspx" />
     <Content Include="image\image.png" />
     <Content Include="image\murat.jfif" />
     <Content Include="student.aspx" />
@@ -111,6 +112,13 @@
     </Compile>
     <Compile Include="home2.aspx.designer.cs">
       <DependentUpon>home2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home3.aspx.cs">
+      <DependentUpon>home3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home3.aspx.designer.cs">
+      <DependentUpon>home3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
