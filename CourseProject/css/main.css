@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgba(98,119,227,1);
-    
 }
 
 .wrap {
@@ -13,18 +12,18 @@ body {
 .header {
     height: 72px;
     margin: 10px;
-    
     background-color: rgba(217,217,217,1);
     border-radius: 20px;
 }
 
 .content {
     width: 34%;
-    height: 580px;
-    background-color: #ff0000;
+    height: 360px;
+    background-color: rgba(217,217,217,1);
     float: right;
     border-radius: 20px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .sidebar {
@@ -34,6 +33,9 @@ body {
     float: left;
     border-radius: 20px;
     margin-bottom: 5px;
+    align-items: center;
+    display: grid;
+    place-items: center;
 }
 
 .footer {
@@ -42,17 +44,101 @@ body {
     background-color: rgba(217,217,217,1);
     clear: both;
     border-radius: 20px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
-.login {
-    
-    height:fit-content;
-    background-color: rgb(1 216 0);
-    text-align:center;
+#giris {
+    color: #000000;
+    background-color: #6377E3;
+    border-color: #6377E3;
+    border-radius: 20px;
+    vertical-align: central;
+}
 
+kullaniciEposta, kullaniciSifre {
+    border-radius: 40px;
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: rgba(217,217,217,1);
+    border-radius: 20px;
+    margin-bottom:10px;
+    margin-top:10px;
+    height:48px;
+
+}
+
+    /* Links inside the navbar */
+    .navbar a {
+        float: left;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: black;
+        padding: 10px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+        font-weight: bold;
+    }
+.dropdown-content {
+    font-size: 12px;
+}
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(217,217,217,1);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#search {
    
-    
+    height: 30px;
+    width: 500px;
+    border-radius: 20px;
+    text-align:center;
+    margin: 0 auto;
 }
-
-

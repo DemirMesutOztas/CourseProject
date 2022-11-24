@@ -21,7 +21,7 @@ namespace CourseProject
 
         protected void giris_Click(object sender, EventArgs e)
         {
-            string kullanici = kullaniciAdi.Text;
+            string kullanici = kullaniciEposta.Text;
             string sifre = kullaniciSifre.Text;
 
             SqlCommand sorgula = new SqlCommand("SELECT * FROM student WHERE email=@email AND password=@password", baglan);

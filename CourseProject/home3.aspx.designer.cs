@@ -33,13 +33,13 @@ namespace CourseProject
         protected global::System.Web.UI.WebControls.Label lblBilgi;
 
         /// <summary>
-        /// kullaniciAdi control.
+        /// kullaniciEposta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox kullaniciAdi;
+        protected global::System.Web.UI.WebControls.TextBox kullaniciEposta;
 
         /// <summary>
         /// lblBilgi2 control.
