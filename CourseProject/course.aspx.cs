@@ -24,6 +24,9 @@ namespace CourseProject
         {
             SqlCommand sorgula2 = new SqlCommand("INSERT INTO reservation (teacherId,studentId, date, hour, lessonname, lessontype) VALUES ( @teacher, @student, @tarih, @saat, @ders, @derstipi)", baglan);
 
+            
+
+
             var trh = GridView1.SelectedRow.FindControl("tarih") as TextBox;
             string trh2 = trh.Text;
 

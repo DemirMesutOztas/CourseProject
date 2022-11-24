@@ -69,6 +69,11 @@
         </div>
 
 
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource11" DataTextField="hourId" DataValueField="hourId">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [hourId], [hour] FROM [hour]"></asp:SqlDataSource>
+
+
     </form>
 </body>
 </html>

@@ -17,49 +17,7 @@
 
                 <h3>Kurslar</h3>
 
-                <%--                <tbody>
-                    <tr>
-                        <td>
-                            <asp:Image ID="trImage" runat="server" Alt="Fotoğraf"  ImageUrl="~/image/murat.jfif"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="courseName" runat="server" Text="Ders Adı"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Eğitmen Adı ve Soyadı</td>
-                        <td>
-                            <asp:Label ID="trainerName" runat="server" Text="Label"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tecrübe</td>
-                        <td>
-                            <asp:Label ID="trainerExp" runat="server" Text="Label"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>İl</td>
-                        <td>
-                            <asp:Label ID="city" runat="server" Text="Label"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ders Tipi</td>
-                        <td>
-                            <asp:Label ID="lessonType" runat="server" Text="Label"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Button ID="lessonChoose" runat="server" Text="Rezervasyon Yap" />
-                        </td>
 
-                    </tr>
-
-                </tbody>--%>
             </table>
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
