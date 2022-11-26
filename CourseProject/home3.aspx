@@ -66,21 +66,23 @@
                 <asp:Table runat="server" CellPadding="1" HorizontalAlign="Center">
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label ID="lblBilgi" runat="server" Text="E-posta"></asp:Label>
+                            <asp:Label ID="epostalb" runat="server" Text="E-posta"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:TextBox ID="kullaniciEposta" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="epostatx" runat="server"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label ID="lblBilgi2" runat="server" Text="Şifre"></asp:Label>
+                            <asp:Label ID="sifrelb" runat="server" Text="Şifre"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:TextBox ID="kullaniciSifre" runat="server" Type="password"></asp:TextBox>
+                            <asp:TextBox ID="sifretx" runat="server" Type="password"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
+
+                <asp:Label ID="lblBilgi" runat="server"></asp:Label>
 
                 <br />
                 <br />

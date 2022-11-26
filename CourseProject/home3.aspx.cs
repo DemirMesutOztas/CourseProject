@@ -21,8 +21,8 @@ namespace CourseProject
 
         protected void giris_Click(object sender, EventArgs e)
         {
-            string kullanici = kullaniciEposta.Text;
-            string sifre = kullaniciSifre.Text;
+            string kullanici = epostatx.Text;
+            string sifre = sifretx.Text;
 
             SqlCommand sorgula = new SqlCommand("SELECT * FROM student WHERE email=@email AND password=@password", baglan);
 
@@ -33,7 +33,7 @@ namespace CourseProject
             if (oku.Read())
             {
                 Session["studentId"] = oku["studentId"].ToString();
-                lblBilgi.Text = oku["studentId"].ToString();
+               // lblBilgi.Text = oku["studentId"].ToString();
                 Response.Redirect("course.aspx");
 
             }
