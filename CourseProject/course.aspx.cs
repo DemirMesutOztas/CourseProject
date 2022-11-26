@@ -16,17 +16,18 @@ namespace CourseProject
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
+
         }
 
-        
+
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlCommand sorgula2 = new SqlCommand("INSERT INTO reservation (teacherId,studentId, date, hour, lessonname, lessontype) VALUES ( @teacher, @student, @tarih, @saat, @ders, @derstipi)", baglan);
 
             
-
-
             var trh = GridView1.SelectedRow.FindControl("tarih") as TextBox;
             string trh2 = trh.Text;
 
@@ -36,7 +37,7 @@ namespace CourseProject
             var id = GridView1.SelectedRow.FindControl("trid") as Label;
             
             string id2 = id.Text;
-            Label1.Text = "Merhaba" + id2;
+       
             int id3 = int.Parse(id2);
 
             string sessionId = Session["studentId"].ToString();
@@ -52,9 +53,28 @@ namespace CourseProject
             sorgula2.Parameters.AddWithValue("@teacher",id3 );
             sorgula2.Parameters.AddWithValue("@student", stdId);
             sorgula2.Parameters.AddWithValue("@derstipi", dersTipi2);
-            baglan.Open();
-            sorgula2.ExecuteNonQuery();
 
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.Connection = baglan;
+            //baglan.Open();
+            //cmd.CommandText = "SELECT hour from hour where hour not in (select hour from reservation where teacherId=@teacher) ";
+
+
+            //cmd.Parameters.AddWithValue("@teacher", id3);
+
+            //SqlDataReader sdr = cmd.ExecuteReader();
+            //while (sdr.Read())
+            //{
+
+            //    DropDownList2.Items.Add(sdr["hour"].ToString());
+            //}
+
+
+            baglan.Open();
+            
+            sorgula2.ExecuteNonQuery();
+          
+          
             baglan.Close();
             baglan.Dispose();
         }
