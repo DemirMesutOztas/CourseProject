@@ -38,25 +38,30 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Ders Tipi">
                     <ItemTemplate>
-                        <asp:DropDownList ID="dersTipi" runat="server" AutoPostBack="false">
+                        <asp:DropDownList ID="dersTipi" runat="server" autopostback ="false">
                             <asp:ListItem>Online</asp:ListItem>
                             <asp:ListItem>Yüz yüze</asp:ListItem>
                         </asp:DropDownList>
                     </ItemTemplate>
                 </asp:TemplateField>
-
                 <asp:TemplateField HeaderText="Tarih">
                     <ItemTemplate>
                         <asp:TextBox ID="tarih" runat="server" type="date"></asp:TextBox>
                     </ItemTemplate>
                 </asp:TemplateField>
-
-
-
                 <asp:TemplateField HeaderText="Saat">
                     <ItemTemplate>
-                        <asp:DropDownList ID="saat" runat="server" DataSourceID="SqlDataSource2" DataTextField="hour" DataValueField="hour">
-                            <asp:ListItem></asp:ListItem>
+                        <asp:DropDownList ID="saat" runat="server">
+                            <asp:ListItem>09.00</asp:ListItem>
+                            <asp:ListItem>10.00</asp:ListItem>
+                            <asp:ListItem>11.00</asp:ListItem>
+                            <asp:ListItem>12.00</asp:ListItem>
+                            <asp:ListItem>13.00</asp:ListItem>
+                            <asp:ListItem>14.00</asp:ListItem>
+                            <asp:ListItem>15.00</asp:ListItem>
+                            <asp:ListItem>16.00</asp:ListItem>
+                            <asp:ListItem>17.00</asp:ListItem>
+                            <asp:ListItem>18.00</asp:ListItem>
                         </asp:DropDownList>
                     </ItemTemplate>
                 </asp:TemplateField>
@@ -66,32 +71,12 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo], [branch], [name], [surname], [city], [teacherId] FROM [teacher]"></asp:SqlDataSource>
 
+       
+
+
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
-
-
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [hourId], [hour] FROM [hour] "></asp:SqlDataSource>
-
-
-
-
-        <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" DataTextField="hour" DataValueField="hour">
-        </asp:DropDownList>
-
-
-
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [hour] FROM [hour] where([teacherId]=@tea and  [date]=@trh)">
-            <SelectParameters>
-                <asp:Parameter Name="tea" />
-                <asp:Parameter Name="trh" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-
-
-
-
-
-
+       
 
 
     </form>
