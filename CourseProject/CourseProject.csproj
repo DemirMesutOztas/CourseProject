@@ -81,6 +81,7 @@
     <Content Include="assets\img\testimonials-3.jpg" />
     <Content Include="course.aspx" />
     <Content Include="css\main.css" />
+    <Content Include="css\main2.css" />
     <Content Include="home3.aspx" />
     <Content Include="image\image.png" />
     <Content Include="image\murat.jfif" />
@@ -89,7 +90,7 @@
     <Content Include="teacher.aspx" />
     <Content Include="teacherLogin.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="homeBasic.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="course.aspx.cs">
@@ -136,12 +137,12 @@
     <Compile Include="teacherLogin.aspx.designer.cs">
       <DependentUpon>teacherLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="homeBasic.aspx.cs">
+      <DependentUpon>homeBasic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="homeBasic.aspx.designer.cs">
+      <DependentUpon>homeBasic.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

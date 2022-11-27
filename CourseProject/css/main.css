@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(98,119,227,1);
+    background-color: #B7D7D8;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -171,6 +171,7 @@ kullaniciEposta, kullaniciSifre {
     width: 100%;
     background-color: #555;
     overflow: auto;
+    margin-bottom:10px;
 }
 
     .navbar2 a {
