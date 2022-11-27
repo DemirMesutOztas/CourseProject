@@ -26,10 +26,31 @@ body {
     text-align: center;
 }
 
+.content2 {
+    width: 20%;
+    height: 360px;
+    background-color: rgba(217,217,217,1);
+    float: right;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
 .sidebar {
     width: 64%;
     height: 580px;
     background-color: #ff6a00;
+    float: left;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    align-items: center;
+    display: grid;
+    place-items: center;
+}
+.sidebar2 {
+    width: 79%;
+    height: fit-content;
+    background-color: rgba(98,119,227,1);
     float: left;
     border-radius: 20px;
     margin-bottom: 5px;
