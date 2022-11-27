@@ -42,49 +42,67 @@ namespace CourseProject
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Button1 control.
+        /// dersTipiLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label dersTipiLbl;
 
         /// <summary>
-        /// epostalb control.
+        /// dersTipi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label epostalb;
+        protected global::System.Web.UI.WebControls.DropDownList dersTipi;
 
         /// <summary>
-        /// epostatx control.
+        /// tarihLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox epostatx;
+        protected global::System.Web.UI.WebControls.Label tarihLbl;
 
         /// <summary>
-        /// sifrelb control.
+        /// tarih control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label sifrelb;
+        protected global::System.Web.UI.WebControls.TextBox tarih;
 
         /// <summary>
-        /// sifretx control.
+        /// saatLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sifretx;
+        protected global::System.Web.UI.WebControls.Label saatLbl;
+
+        /// <summary>
+        /// saatDrop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList saatDrop;
+
+        /// <summary>
+        /// rezerButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button rezerButton;
 
         /// <summary>
         /// lblBilgi control.
