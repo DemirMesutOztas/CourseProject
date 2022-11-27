@@ -6,6 +6,7 @@
 <head runat="server">
     <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <title>Özel Ders Rezervasyon</title>
 
@@ -41,6 +42,7 @@
                                 
                             </div>
                         </div>
+                       
                     </div>
                 </div>
 
@@ -56,7 +58,10 @@
 
 
 
-                <h2>Oturum aç</h2>
+                <h2>Oturum aç 
+                </h2>
+               
+
 
                 <h3>Yeni kullanıcı ?
                     <asp:HyperLink runat="server" NavigateUrl="~/student.aspx" Font-Underline="false"><span style="color: darkturquoise">Hesap aç</span></asp:HyperLink></h3>
@@ -88,8 +93,14 @@
                 <br />
 
                 <asp:Button ID="giris" runat="server" Text="Giriş" OnClick="giris_Click" Height="38px" Width="131px" />
+                <br />
+                <br />
 
-
+                 <h6>
+                    <asp:HyperLink runat="server" NavigateUrl="~/teacherLogin.aspx" Font-Underline="false">
+                    <span style="color: black">Öğretmen için Oturum Aç</span></asp:HyperLink>
+                </h6>
+                
             </div>
             <!--  İçerik -->
 

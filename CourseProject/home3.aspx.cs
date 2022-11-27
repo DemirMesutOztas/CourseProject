@@ -34,6 +34,7 @@ namespace CourseProject
             {
                 Session["studentId"] = oku["studentId"].ToString();
                // lblBilgi.Text = oku["studentId"].ToString();
+               
                 Response.Redirect("course.aspx");
 
             }

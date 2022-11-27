@@ -8,8 +8,9 @@
 <head runat="server">
     <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-    <title>Özel Ders Rezervasyon</title>
+    <title>Özel Ders Rezervasyon Platformu</title>
 
 </head>
 <body>
@@ -43,6 +44,7 @@
 
                         </div>
                     </div>
+                     <asp:Label id="usericon" runat="server"><i class="fa fa-fw fa-user"></i></asp:Label>
                 </div>
             </div>
 
@@ -98,6 +100,7 @@
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:DropDownList ID="dersTipi" runat="server" AutoPostBack="false">
+                                  <asp:ListItem>Seçiniz</asp:ListItem>
                                 <asp:ListItem>Online</asp:ListItem>
                                 <asp:ListItem>Yüz yüze</asp:ListItem>
                             </asp:DropDownList>
@@ -118,7 +121,9 @@
                              <asp:Label ID="saatLbl" runat="server" Text="Saat"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:DropDownList ID="saatDrop" runat="server" DataTextField="saat" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"></asp:DropDownList>
+                            <asp:DropDownList ID="saatDrop" runat="server" DataTextField="saat"  OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                                <asp:ListItem>Seçiniz</asp:ListItem>
+                            </asp:DropDownList>
                         </asp:TableCell>
                     </asp:TableRow>
 
