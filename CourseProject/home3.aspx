@@ -14,17 +14,18 @@
 <body>
     <form id="form1" runat="server">
         <div class="navbar2">
-            <a class="active2" href="#"><i class="fa fa-fw fa-home"></i>Home</a>
-            <a href="#"><i class="fa fa-fw fa-search"></i>Search</a>
-            <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
-            <a href="#" style="float: right" ><i class="fa fa-fw fa-user"></i>Login</a>
+            <a class="active2" href="home3.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
+
+            <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
+            <a href="#" style="float: right">
+                <i class="fa fa-fw fa-user"></i>
+            </a>
         </div>
         <div class="wrap">
 
 
 
             <div class="sidebar">
-                <input id="search" type="text" placeholder="Search" />
             </div>
             <!-- kenar menü -->
 
@@ -65,13 +66,9 @@
                 <br />
                 <br />
 
-                <h6>
-                    <asp:HyperLink runat="server" NavigateUrl="~/teacherLogin.aspx" Font-Underline="false">
-                    <span style="color: black">Öğretmen için Oturum Aç</span></asp:HyperLink>
-                </h6>
 
             </div>
-           
+
 
         </div>
 

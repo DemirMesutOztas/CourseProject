@@ -23,7 +23,7 @@ namespace CourseProject
             sorgula3.Parameters.AddWithValue("@ogrenci", stdId);
             baglan.Open();
             sorgula3.ExecuteNonQuery();
-            usericon.Text = sorgula3.ExecuteScalar().ToString();
+
 
             baglan.Close();
             baglan.Dispose();
@@ -34,8 +34,8 @@ namespace CourseProject
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-           
+
+
 
 
 
@@ -44,8 +44,8 @@ namespace CourseProject
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-            if((GridView1.SelectedRow==null)|| (tarih.Text=="Seçiniz") || (saatDrop.SelectedValue==null))
+
+            if ((GridView1.SelectedRow == null) || (tarih.Text == "Seçiniz") || (saatDrop.SelectedValue == null))
             {
                 Response.Write("<script>alert('login successful');</script>");
             }
@@ -95,50 +95,50 @@ namespace CourseProject
 
                 Response.Redirect("course.aspx");
             }
-            
-            
-            
+
+
+
 
         }
 
         protected void tarih_TextChanged(object sender, EventArgs e)
         {
-           
-            if(GridView1.SelectedValue==null)
+            SqlConnection baglan2 = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
+            //if(GridView1.SelectedDataKey.Value == null)
+            //{
+            //    Response.Write("<script>alert('login successful');</script>");
+            //}
+            //else
+            //{
+            baglan2.Open();
+            SqlCommand sorgu = new SqlCommand("select saat from hour where saat not in (select hour from reservation where teacherId=@ogr and date_choose=@trh)", baglan2);
+
+
+            string secilenTarih = tarih.Text;
+            sorgu.Parameters.AddWithValue("@trh", secilenTarih);
+
+            var id = GridView1.SelectedRow.FindControl("trid") as Label;
+            string id2 = id.Text;
+            int id3 = int.Parse(id2);
+            sorgu.Parameters.AddWithValue("@ogr", id3);
+
+
+            saatDrop.Items.Clear();
+
+            SqlDataReader dr = sorgu.ExecuteReader();
+
+            while (dr.Read())
             {
-                Response.Write("<script>alert('login successful');</script>");
+                string x = dr["saat"].ToString();
+
+                saatDrop.Items.Add(x);
+                // Label2.Text = dr["saat"].ToString();
             }
-            else
-            {
 
-                SqlCommand sorgu = new SqlCommand("select saat from hour where saat not in (select hour from reservation where teacherId=@ogr and date_choose=@trh)", baglan);
-                baglan.Open();
-
-                string secilenTarih = tarih.Text;
-                sorgu.Parameters.AddWithValue("@trh", secilenTarih);
-
-                var id = GridView1.SelectedRow.FindControl("trid") as Label;
-                string id2 = id.Text;
-                int id3 = int.Parse(id2);
-                sorgu.Parameters.AddWithValue("@ogr", id3);
+            baglan2.Close();
+            //}
 
 
-                saatDrop.Items.Clear();
-
-                SqlDataReader dr = sorgu.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    string x = dr["saat"].ToString();
-
-                    saatDrop.Items.Add(x);
-                    // Label2.Text = dr["saat"].ToString();
-                }
-
-                baglan.Close();
-            }
-            
-            
 
         }
 

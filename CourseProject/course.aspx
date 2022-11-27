@@ -8,63 +8,46 @@
 <head runat="server">
     <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <title>Özel Ders Rezervasyon Platformu</title>
+    <title>Özel Ders Rezervasyon</title>
 
 </head>
 <body>
-    <form id="form2" runat="server">
+    <form id="form1" runat="server">
+        <div class="navbar2">
+            <a class="active2" href="home3.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
+
+            <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
+            <a href="#" style="float: right">
+                <i class="fa fa-fw fa-user"></i>
+            </a>
+        </div>
         <div class="wrap">
 
-
-            <div class="topnav">
-                <div class="navbar">
-                    <a href="#home">Anasayfa</a>
-                    <a href="#news">Dersler</a>
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            Öğretmen
-                                <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="teacherLogin.aspx">Öğretmen Giriş</a>
-                            <a href="teacher.aspx">Öğretmen Kayıt</a>
-                            <a href="#">Eğitmen Listesi</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            Öğrenci
-                                <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="studentLogin.aspx">Öğrenci Giriş</a>
-                            <a href="student.aspx">Öğrenci Kayıt</a>
-
-                        </div>
-                    </div>
-                     <asp:Label id="usericon" runat="server"><i class="fa fa-fw fa-user"></i></asp:Label>
-                </div>
-            </div>
-
-            <!-- Başlık -->
-
-            <div class="sidebar2">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Height="288px" Width="269px">
+            <div class="sidebar">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" HorizontalAlign="Center">
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowSelectButton="True" SelectText="Seçiniz" />
 
-                        <asp:ImageField DataImageUrlField="photo" ItemStyle-Width="15px" ControlStyle-Width="50" ControlStyle-Height="50">
-                            <ControlStyle Height="50px" Width="50px"></ControlStyle>
+                        <asp:ImageField DataImageUrlField="photo" ItemStyle-Width="32px" ControlStyle-Width="50" ControlStyle-Height="50" HeaderText="Fotoğraf">
+                            <ControlStyle Height="120px" Width="90px"></ControlStyle>
 
-                            <ItemStyle Width="15px"></ItemStyle>
+                            <ItemStyle Width="15px" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                         </asp:ImageField>
 
-                        <asp:BoundField DataField="branch" HeaderText="branch" SortExpression="branch" />
-                        <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
-                        <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
-                        <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+                        <asp:BoundField DataField="branch" HeaderText="Ders" SortExpression="branch" >
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="name" HeaderText="Ad" SortExpression="name" >
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="surname" HeaderText="Soyad" SortExpression="surname" >
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="city" HeaderText="Şehir" SortExpression="city" >
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
                         <asp:TemplateField HeaderText="teacherId" SortExpression="teacherId" Visible="False">
                             <EditItemTemplate>
                                 <asp:Label ID="Label1" runat="server" Text='<%# Eval("teacherId") %>'></asp:Label>
@@ -75,6 +58,7 @@
                         </asp:TemplateField>
 
                     </Columns>
+                    <EditRowStyle BorderStyle="Dotted" HorizontalAlign="Center" VerticalAlign="Middle" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [photo], [branch], [name], [surname], [city], [teacherId] FROM [teacher]"></asp:SqlDataSource>
 
@@ -85,9 +69,8 @@
                     </FilterParameters>
                 </asp:SqlDataSource>--%>
             </div>
-            <!-- kenar menü -->
 
-            <div class="content2">
+            <div class="content">
 
 
                 <h2>Rezervasyon Yap</h2>
@@ -100,7 +83,7 @@
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:DropDownList ID="dersTipi" runat="server" AutoPostBack="false">
-                                  <asp:ListItem>Seçiniz</asp:ListItem>
+                                <asp:ListItem>Seçiniz</asp:ListItem>
                                 <asp:ListItem>Online</asp:ListItem>
                                 <asp:ListItem>Yüz yüze</asp:ListItem>
                             </asp:DropDownList>
@@ -118,10 +101,10 @@
 
                     <asp:TableRow>
                         <asp:TableCell>
-                             <asp:Label ID="saatLbl" runat="server" Text="Saat"></asp:Label>
+                            <asp:Label ID="saatLbl" runat="server" Text="Saat"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:DropDownList ID="saatDrop" runat="server" DataTextField="saat"  OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                            <asp:DropDownList ID="saatDrop" runat="server" DataTextField="saat" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                                 <asp:ListItem>Seçiniz</asp:ListItem>
                             </asp:DropDownList>
                         </asp:TableCell>
@@ -138,17 +121,13 @@
 
 
             </div>
-            <!--  İçerik -->
-
-            <div class="footer">
-                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-            </div>
-            <!-- Alt bilgi -->
 
         </div>
 
     </form>
 </body>
 </html>
+
+
 
 

@@ -4,45 +4,59 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Özel Ders Rezervasyon</title>
+
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <table>
+    <form id="form2" runat="server">
+        <div class="navbar2">
+            <a class="active2" href="home3.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
 
-                <h3>Eğitmen Kayıt Ekranı</h3>
+            <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
+            <a href="#" style="float: right">
+                <i class="fa fa-fw fa-user"></i>
+            </a>
+        </div>
+        <div class="wrap">
 
-                <tbody>
-                    <tr>
-                        <asp:Image ID="trImage" runat="server" Alt="Fotoğraf" />
-                    </tr>
-                    <tr>
-                        <td>Adı</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_adi" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Soyadı</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_surname" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>E-mail</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_email" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                  
-                    <tr>
-                        <td>Yaş</td>
-                        <td>
-                            <asp:TextBox ID="tr_txt_age" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    
+            <div class="content3">
+                 <h3>Eğitmen Kayıt Ekranı</h3>
+
+                <table>
+
+                   
+
+                    <tbody>
+                       
+                        <tr>
+                            <td>Adı</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_adi" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Soyadı</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_surname" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_email" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Yaş</td>
+                            <td>
+                                <asp:TextBox ID="tr_txt_age" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+
                         <tr>
                             <td>Şehir</td>
                             <td>
@@ -84,15 +98,22 @@
                                 <asp:FileUpload ID="fileUpload1" runat="server" />
                             </td>
                         </tr>
-                    
-                </tbody>
+                       
 
-            </table>
+                    </tbody>
+
+                </table>
+                <asp:Button ID="teacher_kaydet" runat="server" Text="Kaydet" OnClick="teacher_kaydet_Click1" Height="45px" Width="116px"  />
+
+            </div>
+       
 
         </div>
-        <p>
-            <asp:Button ID="teacher_kaydet" runat="server" Text="Kaydet" OnClick="teacher_kaydet_Click1" />
-        </p>
+
+
+
     </form>
 </body>
 </html>
+
+

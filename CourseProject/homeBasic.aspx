@@ -6,30 +6,35 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
-    <link href="./css/main2.css" rel="stylesheet" />
-
-    <title>Özel Ders Rezervasyon</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Özel Ders Rezervasyon</title>
 
 </head>
 <body>
-    <form id="form2" runat="server">
+    <form id="form1" runat="server">
+        <div class="navbar2">
+            <a class="active2" href="home3.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
 
-        <ul>
-            <li><a href="homeBasic.aspx">Özel Ders Rezervasyon</a></li>
-            <li><a href="#news">Dersler</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li style="float: right"><a class="active" href="teacherLogin.aspx">Eğitmen</a></li>
-            <li style="float: right"><a href="#"><i class="fa fa-fw fa-user""></i></a></li>
-        </ul>
-    
+            <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
+            <a href="#" style="float: right">
+                <i class="fa fa-fw fa-user"></i>
+            </a>
+        </div>
+        <div class="wrap">
+                      
+            <div class="content2">
+               
+
+                
+
+
+            </div>
+
+
+        </div>
 
     </form>
 </body>
 </html>
-
-
-
