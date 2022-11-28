@@ -18,7 +18,7 @@
         <div class="navbar2">
             <a class="active2" href="home3.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
 
-            <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
+            <a href="studentControl.aspx"><i class="fa fa-fw fa-book"></i>Kontrol Paneli</a>
             <a href="#" style="float: right">
                 <i class="fa fa-fw fa-user"></i>
             </a>
@@ -26,27 +26,30 @@
         <div class="wrap">
 
             <div class="sidebar">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" HorizontalAlign="Center">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" >
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" SelectText="Seçiniz" />
+                        <asp:CommandField ShowSelectButton="True" SelectText="Seçiniz" >
 
-                        <asp:ImageField DataImageUrlField="photo" ItemStyle-Width="32px" ControlStyle-Width="50" ControlStyle-Height="50" HeaderText="Fotoğraf">
+                        <ItemStyle Width="64px" />
+                        </asp:CommandField>
+
+                        <asp:ImageField DataImageUrlField="photo" ItemStyle-Width="120px" ControlStyle-Width="90" ControlStyle-Height="120" HeaderText="Fotoğraf">
                             <ControlStyle Height="120px" Width="90px"></ControlStyle>
 
                             <ItemStyle Width="15px" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                         </asp:ImageField>
 
                         <asp:BoundField DataField="branch" HeaderText="Ders" SortExpression="branch" >
-                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="48px" />
                         </asp:BoundField>
                         <asp:BoundField DataField="name" HeaderText="Ad" SortExpression="name" >
-                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="48px" />
                         </asp:BoundField>
                         <asp:BoundField DataField="surname" HeaderText="Soyad" SortExpression="surname" >
-                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="48px" />
                         </asp:BoundField>
                         <asp:BoundField DataField="city" HeaderText="Şehir" SortExpression="city" >
-                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="48px" />
                         </asp:BoundField>
                         <asp:TemplateField HeaderText="teacherId" SortExpression="teacherId" Visible="False">
                             <EditItemTemplate>
@@ -70,7 +73,7 @@
                 </asp:SqlDataSource>--%>
             </div>
 
-            <div class="content">
+            <div class="content3">
 
 
                 <h2>Rezervasyon Yap</h2>

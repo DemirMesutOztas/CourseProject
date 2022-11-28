@@ -13,10 +13,20 @@ body {
 
 
 .content {
-    width: 36%;
+    width: 34%;
     height: 360px;
     background-color: #f9f9f9;
-    float: right;
+    float:right;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.content3 {
+    width: 34%;
+    height: 360px;
+    background-color: #f9f9f9;
+    float:left;
     border-radius: 20px;
     margin-bottom: 5px;
     text-align: center;
@@ -34,14 +44,16 @@ body {
 
 .sidebar {
     width: 64%;
-    height: 580px;
+    height: 100%;
     background-color: #a2d8df;
     float: left;
     border-radius: 20px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom:10px;
     align-items: center;
     display: grid;
     place-items: center;
+    
 }
 
 #trlblBilgi, #lblBilgi {
@@ -59,7 +71,10 @@ kullaniciEposta, kullaniciSifre {
     border-radius: 40px;
 }
 
-
+#GridView1 {
+    margin-top:5px;
+    margin-bottom:5px;
+}
 
 
 .navbar2 {

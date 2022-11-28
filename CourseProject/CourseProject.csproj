@@ -86,8 +86,10 @@
     <Content Include="image\image.png" />
     <Content Include="image\murat.jfif" />
     <Content Include="student.aspx" />
+    <Content Include="studentControl.aspx" />
     <Content Include="studentLogin.aspx" />
     <Content Include="teacher.aspx" />
+    <Content Include="teacherControl.aspx" />
     <Content Include="teacherLogin.aspx" />
     <Content Include="Web.config" />
     <Content Include="homeBasic.aspx" />
@@ -116,6 +118,13 @@
     <Compile Include="student.aspx.designer.cs">
       <DependentUpon>student.aspx</DependentUpon>
     </Compile>
+    <Compile Include="studentControl.aspx.cs">
+      <DependentUpon>studentControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="studentControl.aspx.designer.cs">
+      <DependentUpon>studentControl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="studentLogin.aspx.cs">
       <DependentUpon>studentLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +138,13 @@
     </Compile>
     <Compile Include="teacher.aspx.designer.cs">
       <DependentUpon>teacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="teacherControl.aspx.cs">
+      <DependentUpon>teacherControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="teacherControl.aspx.designer.cs">
+      <DependentUpon>teacherControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="teacherLogin.aspx.cs">
       <DependentUpon>teacherLogin.aspx</DependentUpon>

@@ -27,7 +27,7 @@ namespace CourseProject
             gonder2.Connection = baglanti2;
            
             string fn = "~/image/" + System.IO.Path.GetFileName(fileUpload1.PostedFile.FileName);
-            string saveLocation = Server.MapPath(".")  + System.IO.Path.GetFileName(fileUpload1.PostedFile.FileName);
+            string saveLocation = Server.MapPath("~/image/")  + System.IO.Path.GetFileName(fileUpload1.PostedFile.FileName);
 
             fileUpload1.PostedFile.SaveAs(saveLocation);
 
