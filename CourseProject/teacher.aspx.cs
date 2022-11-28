@@ -41,7 +41,17 @@ namespace CourseProject
 
             baglanti2.Dispose();
             baglanti2.Close();
-            
+
+            string message = "Başarılı bir şekilde kayıt oldunuz!";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
+            "setTimeout(function() { window.location.replace('teacherLogin.aspx') }, 3000);", true);
+
+
         }
     }
 }

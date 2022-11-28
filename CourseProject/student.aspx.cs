@@ -26,15 +26,29 @@ namespace CourseProject
 
         protected void user_kaydet_Click(object sender, EventArgs e)
         {
-           
+
             baglanti.Open();
-            SqlCommand gonder = new SqlCommand("insert into student (name,surname,email, password, password_again ) values('" + t_txt_adi.Text + "','" + t_txt_surname.Text 
-                                               + "','" + t_txt_email.Text + "','" 
-                                               + t_txt_password.Text + "','" + t_txt_password2.Text +"')", baglanti);
+            SqlCommand gonder = new SqlCommand("insert into student (name,surname,email, password, password_again ) values('" + t_txt_adi.Text + "','" + t_txt_surname.Text
+                                               + "','" + t_txt_email.Text + "','"
+                                               + t_txt_password.Text + "','" + t_txt_password2.Text + "')", baglanti);
             gonder.ExecuteNonQuery();
             baglanti.Dispose();
             baglanti.Close();
-            Response.Redirect("teacherLogin.aspx");
+
+
+
+            //Display success message.
+            string message = "Başarılı bir şekilde kayıt oldunuz!";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
+            "setTimeout(function() { window.location.replace('studentLogin.aspx') }, 3000);", true);
+
+            
+
 
         }
     }

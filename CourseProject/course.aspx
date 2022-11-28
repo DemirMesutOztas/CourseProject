@@ -16,7 +16,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="navbar2">
-            <a class="active2" href="home3.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
+            <a class="active2" href="#"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
 
             <a href="studentControl.aspx"><i class="fa fa-fw fa-book"></i>Kontrol Paneli</a>
             <a href="#" style="float: right">
@@ -73,13 +73,13 @@
                 </asp:SqlDataSource>--%>
             </div>
 
-            <div class="content3">
+            <div class="content35">
 
 
-                <h2>Rezervasyon Yap</h2>
+                <h6 style="color:aliceblue">Rezervasyon Yap</h6>
 
 
-                <asp:Table runat="server" CellPadding="1" HorizontalAlign="Center">
+                <asp:Table runat="server" CellPadding="2" RowPadding="2" HorizontalAlign="NotSet">
                     <asp:TableRow>
                         <asp:TableCell>
                             <asp:Label ID="dersTipiLbl" runat="server" Text="Ders Tipi"></asp:Label>

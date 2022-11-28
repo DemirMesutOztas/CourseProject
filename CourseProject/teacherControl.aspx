@@ -20,9 +20,9 @@
                 <asp:Label id="icon" runat="server"></asp:Label>
             </a>
         </div>
-        <div class="wrap">
+        <div class="wrap33">
                       
-            <div class="content2">
+            <div class="content33">
                
 
                 
@@ -36,7 +36,7 @@
                         <asp:BoundField DataField="name" HeaderText="Öğrenci Ad" SortExpression="student.name" />
                         <asp:BoundField DataField="surname" HeaderText="Öğrenci Soyad" SortExpression="student.surname" />
                         <asp:CommandField CancelText="İptal Et" DeleteText="Sil" EditText="Düzenle" ShowEditButton="True" />
-                        <asp:CommandField ShowDeleteButton="True" />
+                        <asp:CommandField ShowDeleteButton="True" DeleteText="Sil" />
                     </Columns>
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT student.name, student.surname, [teacherId], [date_choose], [hour], [lessonname], [lessontype] FROM [reservation] JOIN [student] ON reservation.studentId=student.studentId WHERE ([teacherId] = @teacherId)">

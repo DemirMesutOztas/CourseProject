@@ -37,7 +37,7 @@ namespace CourseProject
             oku.Close();
             baglan.Close();
 
-            //SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
+            SqlDataSource1.SelectParameters["studentId"].DefaultValue = ogrenciNo;
         }
     }
 }

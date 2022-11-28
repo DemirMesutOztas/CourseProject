@@ -7,13 +7,29 @@ body {
 
 
 .wrap {
-    width: 980px;
+    width: 1029px;
     margin: 0 auto;
+}
+
+.wrap33 {
+    width: fit-content;
+    margin: 10px auto;
+   
+}
+
+.content33 {
+    width: fit-content;
+    height: fit-content;
+    background-color: #f9f9f9;
+    
+    border-radius: 20px;
+    margin px;
+    text-align: center;
 }
 
 
 .content {
-    width: 34%;
+    width: 400px%;
     height: 360px;
     background-color: #f9f9f9;
     float:right;
@@ -23,7 +39,7 @@ body {
 }
 
 .content3 {
-    width: 34%;
+    width: 45%;
     height: 360px;
     background-color: #f9f9f9;
     float:left;
@@ -31,6 +47,20 @@ body {
     margin-bottom: 5px;
     text-align: center;
 }
+
+.content35 {
+    width: 30%;
+    height: 200px;
+    background-color: #31566e;
+    vertical-align:central;
+    align-content:center;
+    float: right;
+    border-radius: 20px;
+    margin: 10px;
+    
+    text-align: center;
+}
+
 .content2 {
     width: 50%;
     height: 200px;
@@ -61,8 +91,9 @@ body {
     color: red;
 }
 
-#giris, #teacher_kaydet, #trgiris, #user_kaydet {
+#giris, #teacher_kaydet, #trgiris, #user_kaydet, #rezerButton {
     background-color: #a2d8df;
+    margin-top:5px;
     border-radius: 20px;
     vertical-align: central;
 }

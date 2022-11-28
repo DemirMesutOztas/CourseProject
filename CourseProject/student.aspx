@@ -27,7 +27,7 @@
                 <h3>Öğrenci Kayıt Ekranı</h3>
                 <table>
 
-                    
+
 
                     <tbody>
                         <tr>
@@ -59,18 +59,28 @@
                             <td>Şifre</td>
                             <td>
                                 <asp:TextBox ID="t_txt_password" runat="server" TextMode="Password"></asp:TextBox>
+                                <br />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="t_txt_password"
+                                    ErrorMessage="Zorunlu Alan" ForeColor="Red" Display="Dynamic" Font-Size="XX-Small">
+                                </asp:RequiredFieldValidator>
                             </td>
+
+
                         </tr>
                         <tr>
                             <td>Şifre Tekrar</td>
                             <td>
                                 <asp:TextBox ID="t_txt_password2" runat="server" TextMode="Password"></asp:TextBox>
+                                <br />
+                                <asp:CompareValidator runat="server" ControlToCompare="t_txt_password" ControlToValidate="t_txt_password2" 
+                                    ErrorMessage="Şifre eşleşmedi." ForeColor="Red" Display="Dynamic" Font-Size="XX-Small">
+                                </asp:CompareValidator>
                             </td>
                         </tr>
                     </tbody>
 
                 </table>
-               <asp:Button ID="user_kaydet" runat="server" Text="Kaydet" OnClick="user_kaydet_Click" Height="45px" Width="116px" />
+                <asp:Button ID="user_kaydet" runat="server" Text="Kaydet" OnClick="user_kaydet_Click" Height="45px" Width="116px" />
 
             </div>
 

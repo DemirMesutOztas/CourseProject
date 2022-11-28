@@ -20,9 +20,33 @@
                 <asp:Label id="icon" runat="server"></asp:Label>
             </a>
         </div>
-        <div class="wrap">
+        <div class="wrap33">
                       
-            <div class="content2">
+            <div class="content33">
+               
+
+                
+
+
+                
+
+
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                    <Columns>
+                        <asp:BoundField DataField="lessonname" HeaderText="Ders Adı" SortExpression="lessonname" />
+                        <asp:BoundField DataField="lessontype" HeaderText="Ders Tipi" SortExpression="lessontype" />
+                        <asp:BoundField DataField="name" HeaderText="Eğitmen Adı" SortExpression="teacher.name" />
+                        <asp:BoundField DataField="surname" HeaderText="Eğitmen Soyadı" SortExpression="teacher.surname" />
+                        <asp:BoundField DataField="date_choose" HeaderText="Tarih" SortExpression="date_choose" />
+                        <asp:BoundField DataField="hour" HeaderText="Saat" SortExpression="hour" />
+                        <asp:CommandField CancelText="İptal" DeleteText="Sil" EditText="Düzenle" ShowDeleteButton="True" ShowEditButton="True" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [studentId], teacher.name, teacher.surname, [date_choose], [hour], [lessonname], [lessontype] FROM [reservation] JOIN teacher ON reservation.teacherId = teacher.teacherId WHERE ([studentId] = @studentId)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="1" Name="studentId" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
                
 
                 

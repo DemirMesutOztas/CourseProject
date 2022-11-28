@@ -85,12 +85,20 @@
                             <td>Şifre</td>
                             <td>
                                 <asp:TextBox ID="tr_txt_password" runat="server" TextMode="Password"></asp:TextBox>
+                                 <br />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="tr_txt_password"
+                                    ErrorMessage="Zorunlu Alan" ForeColor="Red" Display="Dynamic" Font-Size="XX-Small">
+                                </asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
                             <td>Şifre Tekrar</td>
                             <td>
                                 <asp:TextBox ID="tr_txt_password2" runat="server" TextMode="Password"></asp:TextBox>
+                                <br />
+                                 <asp:CompareValidator runat="server" ControlToCompare="tr_txt_password" ControlToValidate="tr_txt_password2" 
+                                    ErrorMessage="Şifre eşleşmedi." ForeColor="Red" Display="Dynamic" Font-Size="XX-Small">
+                                </asp:CompareValidator>
                             </td>
                         </tr>
                         <tr>
