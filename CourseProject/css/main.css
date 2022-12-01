@@ -23,13 +23,13 @@ body {
     background-color: #f9f9f9;
     
     border-radius: 20px;
-    margin px;
+    margin:10px;
     text-align: center;
 }
 
 
 .content {
-    width: 400px%;
+    width: 400px;
     height: 360px;
     background-color: #f9f9f9;
     float:right;

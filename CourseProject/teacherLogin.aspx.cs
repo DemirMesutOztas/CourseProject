@@ -33,7 +33,20 @@ namespace CourseProject
             {
                 Session["teacherId"] = oku["teacherId"].ToString();
                 // trlblBilgi.Text = oku["studentId"].ToString();
-                Response.Redirect("teacherControl.aspx");
+
+                string message = "Başarılı bir şekilde oturumunuzu açtınız!";
+                string script = "window.onload = function(){ alert('";
+                script += message;
+                script += "')};";
+                ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+                ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
+                "setTimeout(function() { window.location.replace('teacherControl.aspx') }, 3000);", true);
+                oku.Close();
+                baglan.Close();
+                baglan.Dispose();
+
+                //Response.Redirect("teacherControl.aspx");
 
             }
             else

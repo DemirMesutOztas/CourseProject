@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -37,7 +38,15 @@ namespace CourseProject
             oku.Close();
             baglan.Close();
 
-            SqlDataSource1.SelectParameters["studentId"].DefaultValue = ogrenciNo;
+            SqlDataSource22.SelectParameters["studentId"].DefaultValue = ogrenciNo;
+        }
+
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            FormsAuthentication.SignOut();
+            Response.Redirect("home3.aspx");
         }
     }
+
 }

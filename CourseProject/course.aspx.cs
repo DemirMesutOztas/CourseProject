@@ -92,15 +92,22 @@ namespace CourseProject
             sorgula2.ExecuteNonQuery();
 
             baglan.Close();
-          
 
+            string message = "Rezervasyonunuz başarılı bir şekilde oluşturuldu!";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
+            "setTimeout(function() { window.location.replace('course.aspx') }, 3000);", true);
 
             saatDrop.ClearSelection();
             dersTipi.ClearSelection();
 
 
-            Response.Redirect("course.aspx");
-            //}
+            //Response.Redirect("course.aspx");
+            
 
 
 

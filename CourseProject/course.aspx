@@ -20,7 +20,7 @@
 
             <a href="studentControl.aspx"><i class="fa fa-fw fa-book"></i>Kontrol Paneli</a>
             <a href="#" style="float: right">
-                <i class="fa fa-fw fa-user"></i>
+                <asp:Label id="icon" runat="server"></asp:Label>
             </a>
         </div>
         <div class="wrap">

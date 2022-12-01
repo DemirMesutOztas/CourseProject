@@ -18,7 +18,7 @@
 
             <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
             <a href="#" style="float: right">
-                <i class="fa fa-fw fa-user"></i>
+               
             </a>
         </div>
         <div class="wrap">

@@ -16,6 +16,7 @@ namespace CourseProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
 
         protected void giris_Click(object sender, EventArgs e)
@@ -33,8 +34,21 @@ namespace CourseProject
             {
                 Session["studentId"] = oku["studentId"].ToString();
                 lblBilgi.Text = oku["studentId"].ToString();
-                Response.Redirect("course.aspx");
+               // Response.Redirect("course.aspx");
+               
 
+                string message = "Başarılı bir şekilde oturumunuzu açtınız!";
+                string script = "window.onload = function(){ alert('";
+                script += message;
+                script += "')};";
+                ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+                ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
+                "setTimeout(function() { window.location.replace('course.aspx') }, 3000);", true);
+
+                oku.Close();
+                baglan.Close();
+                baglan.Dispose();
             }
             else
                 lblBilgi.Text = "Kullanıcı adınızı ya da şifrenizi hatalı girdiniz!";
