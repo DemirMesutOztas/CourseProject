@@ -22,11 +22,7 @@
         <div class="wrap">
 
             <div class="sidebar">
-                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
-
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
-
+                
 
             </div>
             <!-- kenar menü -->
