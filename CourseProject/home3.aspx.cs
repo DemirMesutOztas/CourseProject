@@ -50,21 +50,21 @@ namespace CourseProject
 
         }
 
-        protected async void Button1_Click(object sender, EventArgs e)
-        {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:44390/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            HttpResponseMessage response = await client.GetAsync("api/Teacher/Get");
-            if(response.IsSuccessStatusCode)
-            {
-                string myvalue = await response.Content.ReadAsStringAsync();
-                client.Dispose();
-                Label1.Text = myvalue;
-            }
+        //protected async void Button1_Click(object sender, EventArgs e)
+        //{
+        //    HttpClient client = new HttpClient();
+        //    client.BaseAddress = new Uri("http://localhost:44390/");
+        //    client.DefaultRequestHeaders.Accept.Clear();
+        //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //    HttpResponseMessage response = await client.GetAsync("api/Teacher/Get");
+        //    if(response.IsSuccessStatusCode)
+        //    {
+        //        string myvalue = await response.Content.ReadAsStringAsync();
+        //        client.Dispose();
+        //        Label1.Text = myvalue;
+        //    }
             
         
-        }
+        //}
     }
 }
