@@ -17,7 +17,7 @@ namespace CourseProject.Controllers
     {
         SqlConnection baglan = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
 
-        [System.Web.Http.Route("api/CustomerAPI/Get")]
+        
         [System.Web.Http.HttpGet]
         public string Get()
         {
@@ -32,7 +32,7 @@ namespace CourseProject.Controllers
         [System.Web.Http.HttpGet]
         public string GetTop()
         {
-            SqlCommand sorgula2 = new SqlCommand("SELECT TOP 3 teacher.name, COUNT(reservation.teacherId) as EnCokTercihEdilen FROM [reservation] JOIN teacher ON reservation.teacherId = teacher.teacherId GROUP BY teacher.name ORDER BY COUNT(reservation.teacherId)", baglan);
+            SqlCommand sorgula2 = new SqlCommand("SELECT TOP 3 teacher.name, COUNT(reservation.teacherId) as TercihEdilmeSayisi FROM [reservation] JOIN teacher ON reservation.teacherId = teacher.teacherId GROUP BY teacher.name ORDER BY COUNT(reservation.teacherId)", baglan);
 
             SqlDataAdapter data2 = new SqlDataAdapter(sorgula2);
             DataTable dt2 = new DataTable();
