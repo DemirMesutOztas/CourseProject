@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home3.aspx.cs" Inherits="CourseProject.home3" %>
+﻿<%@ Page Language="C#"  Async="True" AutoEventWireup="true" CodeBehind="home3.aspx.cs" Inherits="CourseProject.home3" %>
 
 <!DOCTYPE html>
 
@@ -17,15 +17,17 @@
             <a class="active2" href="home3.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
 
             <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
-            <a href="#" style="float: right">
-               
-            </a>
+            <a href="#" style="float: right"></a>
         </div>
         <div class="wrap">
 
-
-
             <div class="sidebar">
+                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+
+
             </div>
             <!-- kenar menü -->
 

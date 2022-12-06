@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
@@ -14,9 +18,9 @@ namespace CourseProject
         SqlConnection baglan = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
 
 
-        protected void Page_Load(object sender, EventArgs e)
+        protected  void  Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void giris_Click(object sender, EventArgs e)
@@ -44,6 +48,23 @@ namespace CourseProject
             baglan.Close();
             baglan.Dispose();
 
+        }
+
+        protected async void Button1_Click(object sender, EventArgs e)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:44390/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = await client.GetAsync("api/Teacher/Get");
+            if(response.IsSuccessStatusCode)
+            {
+                string myvalue = await response.Content.ReadAsStringAsync();
+                client.Dispose();
+                Label1.Text = myvalue;
+            }
+            
+        
         }
     }
 }
