@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -10,6 +11,7 @@ using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace CourseProject
 {
@@ -18,9 +20,9 @@ namespace CourseProject
         SqlConnection baglan = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
 
 
-        protected  void  Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void giris_Click(object sender, EventArgs e)
@@ -37,8 +39,8 @@ namespace CourseProject
             if (oku.Read())
             {
                 Session["studentId"] = oku["studentId"].ToString();
-               // lblBilgi.Text = oku["studentId"].ToString();
-               
+                // lblBilgi.Text = oku["studentId"].ToString();
+
                 Response.Redirect("course.aspx");
 
             }
@@ -50,21 +52,33 @@ namespace CourseProject
 
         }
 
-        //protected async void Button1_Click(object sender, EventArgs e)
-        //{
-        //    HttpClient client = new HttpClient();
-        //    client.BaseAddress = new Uri("http://localhost:44390/");
-        //    client.DefaultRequestHeaders.Accept.Clear();
-        //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //    HttpResponseMessage response = await client.GetAsync("api/Teacher/Get");
-        //    if(response.IsSuccessStatusCode)
-        //    {
-        //        string myvalue = await response.Content.ReadAsStringAsync();
-        //        client.Dispose();
-        //        Label1.Text = myvalue;
-        //    }
-            
-        
-        //}
+
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            //HttpClient client = new HttpClient();
+            //client.BaseAddress = new Uri("http://localhost:44390/");
+
+            //HttpResponseMessage response = await client.GetAsync("api/Teacher");
+            //if (response.IsSuccessStatusCode)
+            //{
+
+            //    Label1.Text = await response.Content.ReadAsStringAsync();
+
+            //}
+            //else
+            //{
+
+            //    Label1.Text = "gelmedi";
+
+
+
+            //}
+
+
+
+
+
+        }
     }
 }
