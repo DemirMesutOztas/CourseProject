@@ -159,7 +159,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Controllers\OgretmenController.cs" />
     <Compile Include="course.aspx.cs">
       <DependentUpon>course.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +214,7 @@
     <Compile Include="teacherControl.aspx.designer.cs">
       <DependentUpon>teacherControl.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TeacherController.cs" />
     <Compile Include="teacherLogin.aspx.cs">
       <DependentUpon>teacherLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

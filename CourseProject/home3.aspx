@@ -8,9 +8,9 @@
     <link href="./css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <%--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
-        var uri = 'api/Teacher';
+        var uri = 'api/Ogretmen';
 
         $(document).ready(function () {
             // Send an AJAX request
@@ -38,7 +38,7 @@
                     $('#product').text('Error: ' + err);
                 });
         }
-    </script>
+    </script>--%>
 
     <title>Özel Ders Rezervasyon</title>
 
@@ -56,14 +56,11 @@
             <div class="sidebar">
 
                 <div>
-                    <h2>All Products</h2>
-                    <ul id="products" />
-                </div>
-                <div>
-                    <h2>Search by ID</h2>
-                    <input type="text" id="prodId" size="5" />
-                    <input type="button" value="Search" onclick="find();" />
-                    <p id="product" />
+                    <h2>En Çok Tercih Edilen Öğretmen</h2>
+                    
+                    <asp:GridView ID="GridView1" runat="server">
+                    </asp:GridView>
+                   
                 </div>
 
 

@@ -15,7 +15,8 @@ namespace CourseProject
         {
             
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            
+            ControllerBuilder.Current.DefaultNamespaces.Add("CourseProject.Controllers");
+
         }
     }
 }

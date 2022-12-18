@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CourseProject.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -22,6 +23,23 @@ namespace CourseProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            IEnumerable<Teacher> ogr = null;
+            HttpClient hc = new HttpClient();
+            hc.BaseAddress = new Uri("https://localhost:44390/api/");
+
+            var consumeApi = hc.GetAsync("Ogretmen");
+            consumeApi.Wait();
+
+            var readData = consumeApi.Result;
+            if(readData.IsSuccessStatusCode)
+            {
+                var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
+                displayRecords.Wait();
+                ogr = displayRecords.Result;
+                GridView1.DataSource = ogr;
+                GridView1.DataBind();
+
+            }
 
         }
 
