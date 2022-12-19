@@ -56,12 +56,22 @@
             <div class="sidebar">
 
                 <div>
-                    <h2>En Çok Tercih Edilen Öğretmen</h2>
-                    
-                    <asp:GridView ID="GridView1" runat="server">
+                    <h2>En Çok Tercih Edilenler</h2>
+
+                    <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound">
+                       
                     </asp:GridView>
-                   
+
+
                 </div>
+                <div>
+                    <h2>Ders Adına Göre Ara</h2>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="467px" Text="Ara" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                    <asp:GridView ID="GridView2" runat="server">
+                    </asp:GridView>
+                </div>
+
+
 
 
             </div>
@@ -106,6 +116,9 @@
 
 
             </div>
+
+
+
 
 
         </div>

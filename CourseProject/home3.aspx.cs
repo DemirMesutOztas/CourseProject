@@ -23,24 +23,57 @@ namespace CourseProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            IEnumerable<Teacher> ogr = null;
+            //IEnumerable<Teacher> ogr = null;
+            //HttpClient hc = new HttpClient();
+            //hc.BaseAddress = new Uri("https://localhost:44390/api/");
+
+            //var consumeApi = hc.GetAsync("Ogretmen");
+            //consumeApi.Wait();
+
+            //var readData = consumeApi.Result;
+            //if(readData.IsSuccessStatusCode)
+            //{
+            //    var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
+            //    displayRecords.Wait();
+            //    ogr = displayRecords.Result;
+            //    GridView1.DataSource = ogr;
+            //    GridView1.DataBind();
+
+            //}
+
+            IEnumerable<Rezervasyon> rez = null;
             HttpClient hc = new HttpClient();
             hc.BaseAddress = new Uri("https://localhost:44390/api/");
 
-            var consumeApi = hc.GetAsync("Ogretmen");
+            var consumeApi = hc.GetAsync("Rezervasyon");
             consumeApi.Wait();
 
             var readData = consumeApi.Result;
-            if(readData.IsSuccessStatusCode)
+            if (readData.IsSuccessStatusCode)
             {
-                var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
+                var displayRecords = readData.Content.ReadAsAsync<IList<Rezervasyon>>();
                 displayRecords.Wait();
-                ogr = displayRecords.Result;
-                GridView1.DataSource = ogr;
+                rez = displayRecords.Result;
+                GridView1.DataSource = rez;
+
                 GridView1.DataBind();
 
             }
 
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {         
+            
+                if (e.Row.RowType == DataControlRowType.Header)
+                {
+                    e.Row.Cells[0].Text = "Ders Adı";
+                    e.Row.Cells[1].Text = "Öğretmen Adı";
+                    e.Row.Cells[2].Text = "Öğretmen Soyadı";
+                    e.Row.Cells[3].Text = "Ders Tipi";
+                    e.Row.Cells[4].Text = "Toplam";
+                }
+            
         }
 
         protected void giris_Click(object sender, EventArgs e)
@@ -97,6 +130,29 @@ namespace CourseProject
 
 
 
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            IEnumerable<Teacher> tr = null;
+            HttpClient hc = new HttpClient();
+            hc.BaseAddress = new Uri("https://localhost:44390/api/");
+
+            var consumeApi = hc.GetAsync("Teacher");
+            consumeApi.Wait();
+
+            var readData = consumeApi.Result;
+            if (readData.IsSuccessStatusCode)
+            {
+                var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
+                displayRecords.Wait();
+                tr = displayRecords.Result;
+                GridView2.DataSource = tr;
+
+                GridView2.DataBind();
+
+            }
         }
     }
 }
