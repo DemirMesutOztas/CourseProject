@@ -100,7 +100,7 @@ namespace CourseProject
             ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
 
             ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
-            "setTimeout(function() { window.location.replace('course.aspx') }, 3000);", true);
+            "setTimeout(function() { window.location.replace('course.aspx') }, 2000);", true);
 
             saatDrop.ClearSelection();
             dersTipi.ClearSelection();

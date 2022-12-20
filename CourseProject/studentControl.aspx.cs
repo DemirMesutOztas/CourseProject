@@ -47,6 +47,16 @@ namespace CourseProject
             FormsAuthentication.SignOut();
             Response.Redirect("home3.aspx");
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void refreshButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Request.RawUrl);
+        }
     }
 
 }

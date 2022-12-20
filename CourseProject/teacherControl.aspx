@@ -29,8 +29,10 @@
         <div class="wrap33">
 
             <div class="content33">
+                
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="txt"></asp:TextBox>
-                <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="buttongr" OnClick="btnSearch_Click" />
+                <asp:Button ID="btnSearch" runat="server" Text="Ara" CssClass="buttongr" OnClick="btnSearch_Click" />
+                <asp:Button ID="Button2" runat="server" Text="Temizle" CssClass="buttongr" OnClick="Button2_Click"/>
                 <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="reservationId" DataSourceID="SqlDataSource1">
                     <Columns>
                         <asp:BoundField DataField="lessontype" HeaderText="Ders Tipi" SortExpression="lessontype" />
@@ -46,7 +48,7 @@
                     DeleteCommand="DELETE FROM [reservation] WHERE [reservationId] = @reservationId"
                     ProviderName="System.Data.SqlClient"
                     SelectCommand="SELECT student.name, student.surname, [teacherId], [date_choose], [hour], [lessonname], [lessontype], reservationId FROM [reservation] JOIN [student] ON reservation.studentId=student.studentId WHERE ([teacherId] = @teacherId ) "
-                    FilterExpression="name LIKE '{0}%' or surname LIKE '{1}%' or lessontype LIKE '{2}%' OR date_choose LIKE '{3}%' OR hour LIKE '{4}%'">
+                    FilterExpression="name LIKE '{0}%' or surname LIKE '{1}%' or lessontype LIKE '{2}%' OR  date_choose LIKE '{3}%' OR hour LIKE '{4}%'">
                     <DeleteParameters>
                         <asp:Parameter Name="reservationId" Type="Int32" />
                     </DeleteParameters>

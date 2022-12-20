@@ -55,11 +55,12 @@ namespace CourseProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            //Response.Redirect(Request.RawUrl);
             //baglan.Open();
 
             //string ogretmenId = Session["teacherId"].ToString();
             //int ogrId = int.Parse(ogretmenId);
-     
+
 
             //SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
 
@@ -82,6 +83,11 @@ namespace CourseProject
             //GridView1.DataBind();
 
             //baglan.Close();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
