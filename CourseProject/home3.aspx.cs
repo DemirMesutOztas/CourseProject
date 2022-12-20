@@ -132,27 +132,27 @@ namespace CourseProject
 
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
+        //protected void TextBox1_TextChanged(object sender, EventArgs e)
+        //{
 
-            IEnumerable<Teacher> tr = null;
-            HttpClient hc = new HttpClient();
-            hc.BaseAddress = new Uri("https://localhost:44390/api/");
+        //    IEnumerable<Teacher> tr = null;
+        //    HttpClient hc = new HttpClient();
+        //    hc.BaseAddress = new Uri("https://localhost:44390/api/");
 
-            var consumeApi = hc.GetAsync("Teacher");
-            consumeApi.Wait();
+        //    var consumeApi = hc.GetAsync("Teacher");
+        //    consumeApi.Wait();
 
-            var readData = consumeApi.Result;
-            if (readData.IsSuccessStatusCode)
-            {
-                var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
-                displayRecords.Wait();
-                tr = displayRecords.Result;
-                GridView2.DataSource = tr;
+        //    var readData = consumeApi.Result;
+        //    if (readData.IsSuccessStatusCode)
+        //    {
+        //        var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
+        //        displayRecords.Wait();
+        //        tr = displayRecords.Result;
+        //        GridView2.DataSource = tr;
 
-                GridView2.DataBind();
+        //        GridView2.DataBind();
 
-            }
-        }
+        //    }
+        //}
     }
 }

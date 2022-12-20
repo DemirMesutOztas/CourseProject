@@ -41,7 +41,7 @@ namespace CourseProject
                 ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
 
                 ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
-                "setTimeout(function() { window.location.replace('teacherControl.aspx') }, 3000);", true);
+                "setTimeout(function() { window.location.replace('teacherControl.aspx') }, 2000);", true);
                 oku.Close();
                 baglan.Close();
                 baglan.Dispose();

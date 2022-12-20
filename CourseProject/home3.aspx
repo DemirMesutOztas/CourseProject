@@ -64,12 +64,12 @@
 
 
                 </div>
-                <div>
+               <%-- <div>
                     <h2>Ders Adına Göre Ara</h2>
                     <asp:TextBox ID="TextBox1" runat="server" Width="467px" Text="Ara" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
                     <asp:GridView ID="GridView2" runat="server">
                     </asp:GridView>
-                </div>
+                </div>--%>
 
 
 

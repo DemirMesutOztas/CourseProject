@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -37,6 +38,7 @@ namespace CourseProject
             oku.Close();
             baglan.Close();
 
+
             SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
             
 
@@ -49,6 +51,37 @@ namespace CourseProject
             Session.Abandon();
             FormsAuthentication.SignOut();
             Response.Redirect("home3.aspx");
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            //baglan.Open();
+
+            //string ogretmenId = Session["teacherId"].ToString();
+            //int ogrId = int.Parse(ogretmenId);
+     
+
+            //SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
+
+
+            //SqlCommand cmd = new SqlCommand();
+
+            //string sql = "SELECT student.name, student.surname, [teacherId], [date_choose], [hour], [lessonname], [lessontype], reservationId FROM[reservation] JOIN[student] ON reservation.studentId = student.studentId";
+            //if (!string.IsNullOrEmpty(txtSearch.Text.Trim()))
+            //{
+            //    SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
+            //    SqlDataSource1.SelectParameters["ogrenci"].DefaultValue = txtSearch.Text;
+            //}
+            //cmd.CommandText = sql;
+            //cmd.Connection = baglan;
+            //SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
+
+            //baglan.Close();
         }
     }
 }
