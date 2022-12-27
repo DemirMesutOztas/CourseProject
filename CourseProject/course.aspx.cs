@@ -77,6 +77,16 @@ namespace CourseProject
 
             string derstip = dersTipi.SelectedValue;
 
+
+            //
+            
+
+            
+
+
+
+            ///
+
             //var derstipi = GridView1.SelectedRow.FindControl("dersTipi") as DropDownList;
             //string dersTipi2 = derstipi.SelectedItem.Value;
             // Label2.Text = GridView1.SelectedRow.Cells[2].Text;
@@ -89,6 +99,9 @@ namespace CourseProject
             sorgula2.Parameters.AddWithValue("@student", stdId);
             sorgula2.Parameters.AddWithValue("@derstipi", derstip);
             baglan.Open();
+            
+
+
             sorgula2.ExecuteNonQuery();
 
             baglan.Close();
