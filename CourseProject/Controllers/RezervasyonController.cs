@@ -21,7 +21,10 @@ namespace CourseProject.Controllers
         [Route("")]
         public List<Rezervasyon> Get()
         {
-            SqlCommand cmd = new SqlCommand("SELECT reservation.[lessonname] as DersAdı, count(reservationId) as Toplam, teacher.name as Ad, teacher.surname as Soyad, teacher.[teacherId], reservation.[lessontype] as DersTipi FROM[reservation] JOIN[teacher] ON reservation.teacherId = teacher.teacherId group by reservation.[lessonname], teacher.name, teacher.surname, teacher.[teacherId],  reservation.[lessonname], reservation.[lessontype] ORDER BY Toplam desc", baglan);
+            SqlCommand cmd = new SqlCommand("SELECT reservation.[lessonname] as DersAdı, count(reservationId) as Toplam, " +
+                "teacher.name as Ad, teacher.surname as Soyad, teacher.[teacherId], reservation.[lessontype] as DersTipi " +
+                "FROM[reservation] JOIN[teacher] ON reservation.teacherId = teacher.teacherId group by reservation.[lessonname], " +
+                "teacher.name, teacher.surname, teacher.[teacherId],  reservation.[lessonname], reservation.[lessontype] ORDER BY Toplam desc", baglan);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();

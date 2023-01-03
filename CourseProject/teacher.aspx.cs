@@ -58,8 +58,10 @@ namespace CourseProject
 
                 fileUpload1.PostedFile.SaveAs(saveLocation);
 
-                gonder2.CommandText = "INSERT INTO teacher (name, surname, email, age, city, education, branch, password, password_again, photo, information) VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text +
-                                     "','" + tr_txt_age.Text + "','" + tr_txt_city.Text + "','" + tr_txt_education.Text + "','" + tr_txt_branch.Text + "','" + tr_txt_password.Text + "','" +
+                gonder2.CommandText = "INSERT INTO teacher (name, surname, email, age, city, education, branch, password, password_again, photo, information) " +
+                    "VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text +
+                                     "','" + tr_txt_age.Text + "','" + tr_txt_city.Text + "','" + tr_txt_education.Text + "','" + 
+                                     tr_txt_branch.Text + "','" + tr_txt_password.Text + "','" +
                                      tr_txt_password2.Text + "','" + fn + "','" + tr_txt_information.Text + "')";
 
 

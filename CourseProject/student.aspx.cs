@@ -25,16 +25,13 @@ namespace CourseProject
             SqlCommand sorgu3 = new SqlCommand("select studentId from student where email=@posta", baglanti);
             sorgu3.Parameters.AddWithValue("@posta", t_txt_email.Text);
             baglanti.Open();
-
             sorgu3.Connection = baglanti;
-
             SqlDataReader dr = sorgu3.ExecuteReader();
 
             string message = "";
             string script = "";
             if (dr.Read())
             {
-
                 message = "Aynı e-posta adresine sahip kayıtlı kullanıcı bulunmaktadır!";
                 script = "window.onload = function(){ alert('";
                 script += message;
@@ -49,7 +46,6 @@ namespace CourseProject
             }
             else
             {
-
                 dr.Close();
 
                 SqlCommand gonder = new SqlCommand("insert into student (name,surname,email, password, password_again ) values('" + t_txt_adi.Text + "','" + t_txt_surname.Text

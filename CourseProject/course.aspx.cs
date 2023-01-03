@@ -17,16 +17,12 @@ namespace CourseProject
         {
             baglan.Open();
 
-
             string sessionId = Session["studentId"].ToString();
             int stdId = int.Parse(sessionId);
             SqlCommand sorgula3 = new SqlCommand("select name from student where studentId= @ogrenci", baglan);
             sorgula3.Connection = baglan;
-
             sorgula3.Parameters.AddWithValue("@ogrenci", stdId);
-           
             sorgula3.ExecuteNonQuery();
-
 
             baglan.Close();
             baglan.Dispose();
@@ -46,18 +42,12 @@ namespace CourseProject
             sorgula2.Connection = baglan;
             string secilenTarih2 = tarih.Text;
             sorgula2.Parameters.AddWithValue("@trh", secilenTarih2);
-
-            string sa = saatDrop.SelectedValue;
-                        
+            string sa = saatDrop.SelectedValue;          
             var id = GridView1.SelectedRow.FindControl("trid") as Label;
-
             string id2 = id.Text;
-
             int id3 = int.Parse(id2);
-
             string sessionId = Session["studentId"].ToString();
             int stdId = int.Parse(sessionId);
-
             string derstip = dersTipi.SelectedValue;
 
             sorgula2.Parameters.AddWithValue("@ders", GridView1.SelectedRow.Cells[2].Text);
