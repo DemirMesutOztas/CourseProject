@@ -141,6 +141,10 @@
     <Content Include="home3.aspx" />
     <Content Include="image\image.png" />
     <None Include="Scripts\jquery-3.6.1.intellisense.js" />
+    <Content Include="ProjectDatabase\course.mdf" />
+    <Content Include="ProjectDatabase\course_log.ldf">
+      <DependentUpon>course.mdf</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-3.6.1.js" />
     <Content Include="Scripts\jquery-3.6.1.min.js" />
     <Content Include="Scripts\jquery-3.6.1.slim.js" />
