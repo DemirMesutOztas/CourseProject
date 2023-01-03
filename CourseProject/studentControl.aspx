@@ -41,13 +41,14 @@
                         <asp:BoundField DataField="hour" HeaderText="Saat" SortExpression="hour" />
                         <asp:BoundField DataField="name" HeaderText="Öğretmen Adı" SortExpression="name" />
                         <asp:BoundField DataField="surname" HeaderText="Öğretmen Soyadı" SortExpression="surname" />
+                        <asp:BoundField DataField="email" HeaderText="E-posta" SortExpression="email" />
                         <asp:CommandField ShowDeleteButton="True" />
                         <asp:CommandField ShowSelectButton="True" Visible="False" />
                     </Columns>
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource22" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True" ProviderName="System.Data.SqlClient"
                     DeleteCommand="DELETE FROM [reservation] WHERE [reservationId] = @reservationId"
-                    SelectCommand="SELECT [studentId], teacher.name, teacher.surname, [date_choose], [hour], [lessonname], [lessontype],  reservationId FROM [reservation] JOIN teacher ON reservation.teacherId = teacher.teacherId WHERE ([studentId] = @studentId)"
+                    SelectCommand="SELECT [studentId], teacher.name, teacher.surname, [date_choose], [hour], [lessonname], [lessontype],  reservationId, teacher.email FROM [reservation] JOIN teacher ON reservation.teacherId = teacher.teacherId WHERE ([studentId] = @studentId)"
                     UpdateCommand="UPDATE [reservation] SET [studentId] = @studentId, [teacherId] = @teacherId, [date_choose] = @date_choose, [hour] = @hour, [lessonname] = @lessonname, [lessontype] = @lessontype WHERE [reservationId] = @reservationId"
                     FilterExpression="name LIKE '{0}%' or surname LIKE '{1}%' or lessontype LIKE '{2}%' OR  date_choose LIKE '{3}%' OR hour LIKE '{4}%' OR lessonname LIKE '{5}%'">
                     <DeleteParameters>

@@ -15,7 +15,7 @@
         <div class="navbar2">
             <a class="active2" href="teacherControl.aspx"><i class="fa fa-fw fa-home"></i>Özel Ders</a>
 
-            <a href="teacherControl.aspx"><i class="fa fa-fw fa-book"></i>Rezervasyon Kontrol Paneli</a>
+            <a href="teacherControl.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen Kontrol Paneli</a>
             <a href="#" style="float: right">
                 <asp:HyperLink runat="server" NavigateUrl="~/teacher.aspx" Font-Underline="false" Style="float: right">
                     <asp:Label ID="icon" runat="server"></asp:Label>
@@ -40,6 +40,7 @@
                         <asp:BoundField DataField="hour" HeaderText="Saat" SortExpression="hour" />
                         <asp:BoundField DataField="name" HeaderText="Öğrenci Adı" SortExpression="name" />
                         <asp:BoundField DataField="surname" HeaderText="Öğrenci Soyadı" InsertVisible="False" ReadOnly="True" SortExpression="surname" />
+                         <asp:BoundField DataField="email" HeaderText="E-posta" SortExpression="email" />
                         <asp:BoundField DataField="teacherId" HeaderText="teacherId" SortExpression="teacherId" Visible="False" />
                         <asp:CommandField CancelText="İptal" DeleteText="Sil" ShowDeleteButton="True" />
                     </Columns>
@@ -47,7 +48,7 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=course;Integrated Security=True"
                     DeleteCommand="DELETE FROM [reservation] WHERE [reservationId] = @reservationId"
                     ProviderName="System.Data.SqlClient"
-                    SelectCommand="SELECT student.name, student.surname, [teacherId], [date_choose], [hour], [lessonname], [lessontype], reservationId FROM [reservation] JOIN [student] ON reservation.studentId=student.studentId WHERE ([teacherId] = @teacherId ) "
+                    SelectCommand="SELECT student.name, student.surname, [teacherId], [date_choose], [hour], [lessonname], [lessontype], reservationId, student.email FROM [reservation] JOIN [student] ON reservation.studentId=student.studentId WHERE ([teacherId] = @teacherId ) "
                     FilterExpression="name LIKE '{0}%' or surname LIKE '{1}%' or lessontype LIKE '{2}%' OR  date_choose LIKE '{3}%' OR hour LIKE '{4}%'">
                     <DeleteParameters>
                         <asp:Parameter Name="reservationId" Type="Int32" />
