@@ -66,7 +66,7 @@ namespace CourseProject
                 ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
 
                 ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS",
-                "setTimeout(function() { window.location.replace('studentLogin.aspx') }, 2000);", true);
+                "setTimeout(function() { window.location.replace('home3.aspx') }, 2000);", true);
 
 
             }

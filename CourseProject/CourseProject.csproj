@@ -140,7 +140,6 @@
     <Content Include="Global.asax" />
     <Content Include="home3.aspx" />
     <Content Include="image\image.png" />
-    <Content Include="image\murat.jfif" />
     <None Include="Scripts\jquery-3.6.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.1.js" />
     <Content Include="Scripts\jquery-3.6.1.min.js" />
