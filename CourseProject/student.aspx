@@ -27,8 +27,6 @@
                 <h3>Öğrenci Kayıt Ekranı</h3>
                 <table>
 
-
-
                     <tbody>
                         <tr>
                             <td>Adı</td>
@@ -65,7 +63,6 @@
                                 </asp:RequiredFieldValidator>
                             </td>
 
-
                         </tr>
                         <tr>
                             <td>Şifre Tekrar</td>
@@ -83,11 +80,7 @@
                 <asp:Button ID="user_kaydet" runat="server" Text="Kaydet" OnClick="user_kaydet_Click" Height="45px" Width="116px" />
 
             </div>
-
-
         </div>
-
-
 
     </form>
 </body>

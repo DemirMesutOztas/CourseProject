@@ -23,24 +23,6 @@ namespace CourseProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //IEnumerable<Teacher> ogr = null;
-            //HttpClient hc = new HttpClient();
-            //hc.BaseAddress = new Uri("https://localhost:44390/api/");
-
-            //var consumeApi = hc.GetAsync("Ogretmen");
-            //consumeApi.Wait();
-
-            //var readData = consumeApi.Result;
-            //if(readData.IsSuccessStatusCode)
-            //{
-            //    var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
-            //    displayRecords.Wait();
-            //    ogr = displayRecords.Result;
-            //    GridView1.DataSource = ogr;
-            //    GridView1.DataBind();
-
-            //}
-
             IEnumerable<Rezervasyon> rez = null;
             HttpClient hc = new HttpClient();
             hc.BaseAddress = new Uri("https://localhost:44390/api/");
@@ -107,52 +89,10 @@ namespace CourseProject
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            //HttpClient client = new HttpClient();
-            //client.BaseAddress = new Uri("http://localhost:44390/");
-
-            //HttpResponseMessage response = await client.GetAsync("api/Teacher");
-            //if (response.IsSuccessStatusCode)
-            //{
-
-            //    Label1.Text = await response.Content.ReadAsStringAsync();
-
-            //}
-            //else
-            //{
-
-            //    Label1.Text = "gelmedi";
-
-
-
-            //}
-
-
-
-
+            
 
         }
 
-        //protected void TextBox1_TextChanged(object sender, EventArgs e)
-        //{
-
-        //    IEnumerable<Teacher> tr = null;
-        //    HttpClient hc = new HttpClient();
-        //    hc.BaseAddress = new Uri("https://localhost:44390/api/");
-
-        //    var consumeApi = hc.GetAsync("Teacher");
-        //    consumeApi.Wait();
-
-        //    var readData = consumeApi.Result;
-        //    if (readData.IsSuccessStatusCode)
-        //    {
-        //        var displayRecords = readData.Content.ReadAsAsync<IList<Teacher>>();
-        //        displayRecords.Wait();
-        //        tr = displayRecords.Result;
-        //        GridView2.DataSource = tr;
-
-        //        GridView2.DataBind();
-
-        //    }
-        //}
+        
     }
 }

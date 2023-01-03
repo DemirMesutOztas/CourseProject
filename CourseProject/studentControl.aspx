@@ -29,18 +29,6 @@
 
             <div class="content33">
 
-                <%--                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource22" AllowPaging="True" AllowSorting="True">
-                    <Columns>
-                        <asp:BoundField DataField="lessonname" HeaderText="Ders Adı" SortExpression="lessonname" />
-                        <asp:BoundField DataField="lessontype" HeaderText="Ders Tipi" SortExpression="lessontype" />
-                        <asp:BoundField DataField="name" HeaderText="Eğitmen Adı" SortExpression="teacher.name" />
-                        <asp:BoundField DataField="surname" HeaderText="Eğitmen Soyadı" SortExpression="teacher.surname" />
-                        <asp:BoundField DataField="date_choose" HeaderText="Tarih" SortExpression="date_choose" />
-                        <asp:BoundField DataField="hour" HeaderText="Saat" SortExpression="hour" />
-                        <asp:CommandField CancelText="İptal" DeleteText="Sil" EditText="Düzenle" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-                    </Columns>
-                </asp:GridView>--%>
-
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="txt"></asp:TextBox>
                 <asp:Button ID="btnSearch" runat="server" Text="Ara" CssClass="buttongr" OnClick="btnSearch_Click" />
                 <asp:Button ID="refreshButton" runat="server" Text="Temizle" CssClass="buttongr" OnClick="refreshButton_Click" />
@@ -80,13 +68,9 @@
                 </asp:SqlDataSource>
                 <br />
 
-
-
             </div>
 
-
         </div>
-
     </form>
 </body>
 </html>

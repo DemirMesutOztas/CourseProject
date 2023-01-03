@@ -15,20 +15,13 @@ namespace CourseProject
     {
         SqlConnection baglanti = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
 
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-
 
         }
 
         protected void user_kaydet_Click(object sender, EventArgs e)
         {
-
-            
             SqlCommand sorgu3 = new SqlCommand("select studentId from student where email=@posta", baglanti);
             sorgu3.Parameters.AddWithValue("@posta", t_txt_email.Text);
             baglanti.Open();
@@ -36,13 +29,12 @@ namespace CourseProject
             sorgu3.Connection = baglanti;
 
             SqlDataReader dr = sorgu3.ExecuteReader();
-            
+
             string message = "";
             string script = "";
             if (dr.Read())
             {
 
-                //Display success message.
                 message = "Aynı e-posta adresine sahip kayıtlı kullanıcı bulunmaktadır!";
                 script = "window.onload = function(){ alert('";
                 script += message;
@@ -59,11 +51,6 @@ namespace CourseProject
             {
 
                 dr.Close();
-                
-
-
-
-
 
                 SqlCommand gonder = new SqlCommand("insert into student (name,surname,email, password, password_again ) values('" + t_txt_adi.Text + "','" + t_txt_surname.Text
                                                    + "','" + t_txt_email.Text + "','"
@@ -72,11 +59,8 @@ namespace CourseProject
                 baglanti.Dispose();
                 baglanti.Close();
 
-
-
-                //Display success message.
-                 message = "Başarılı bir şekilde kayıt oldunuz!";
-                 script = "window.onload = function(){ alert('";
+                message = "Başarılı bir şekilde kayıt oldunuz!";
+                script = "window.onload = function(){ alert('";
                 script += message;
                 script += "')};";
                 ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);

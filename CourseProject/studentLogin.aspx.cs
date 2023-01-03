@@ -13,7 +13,6 @@ namespace CourseProject
     {
         SqlConnection baglan = new SqlConnection(WebConfigurationManager.ConnectionStrings["Veritabani"].ConnectionString);
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -30,13 +29,12 @@ namespace CourseProject
             sorgula.Parameters.AddWithValue("@password", sifre);
             baglan.Open();
             SqlDataReader oku = sorgula.ExecuteReader();
+
             if (oku.Read())
             {
                 Session["studentId"] = oku["studentId"].ToString();
                 lblBilgi.Text = oku["studentId"].ToString();
-               // Response.Redirect("course.aspx");
                
-
                 string message = "Başarılı bir şekilde oturumunuzu açtınız!";
                 string script = "window.onload = function(){ alert('";
                 script += message;
@@ -52,6 +50,7 @@ namespace CourseProject
             }
             else
                 lblBilgi.Text = "Kullanıcı adınızı ya da şifrenizi hatalı girdiniz!";
+
             oku.Close();
             baglan.Close();
             baglan.Dispose();

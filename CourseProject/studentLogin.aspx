@@ -17,19 +17,18 @@
 
             <a href="teacherLogin.aspx"><i class="fa fa-fw fa-book"></i>Eğitmen</a>
             <a href="#" style="float: right">
-               <asp:Label id="icon" runat="server"></asp:Label> 
+                <asp:Label ID="icon" runat="server"></asp:Label>
             </a>
         </div>
         <div class="wrap">
-                      
+
             <div class="content2">
-               
+
                 <h3>Öğrenci Giriş</h3>
 
                 <h3>Oturum aç ?
                     <asp:HyperLink runat="server" NavigateUrl="~/teacher.aspx" Font-Underline="false"><span style="color: darkturquoise">Hesap aç</span></asp:HyperLink></h3>
                 <br />
-
 
                 <asp:Table runat="server" CellPadding="1" HorizontalAlign="Center">
                     <asp:TableRow>
@@ -55,16 +54,13 @@
                 <br />
                 <br />
 
-                 <asp:Button ID="giris" runat="server" Text="Giriş" OnClick="giris_Click" Height="45px" Width="116px" />
+                <asp:Button ID="giris" runat="server" Text="Giriş" OnClick="giris_Click" Height="45px" Width="116px" />
                 <br />
                 <br />
-
 
             </div>
 
-
         </div>
-
     </form>
 </body>
 </html>

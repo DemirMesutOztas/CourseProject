@@ -4,41 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+
     <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <%--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-    <script>
-        var uri = 'api/Ogretmen';
-
-        $(document).ready(function () {
-            // Send an AJAX request
-            $.getJSON(uri)
-                .done(function (data) {
-                    // On success, 'data' contains a list of products.
-                    $.each(data, function (key, item) {
-                        // Add a list item for the product.
-                        $('<li>', { text: formatItem(item) }).appendTo($('#products'));
-                    });
-                });
-        });
-
-        function formatItem(item) {
-            return item.name  + " " + item.surname + " "  + item.branch;
-        }
-
-        function find() {
-            var id = $('#prodId').val();
-            $.getJSON(uri + '/' + id)
-                .done(function (data) {
-                    $('#product').text(formatItem(data));
-                })
-                .fail(function (jqXHR, textStatus, err) {
-                    $('#product').text('Error: ' + err);
-                });
-        }
-    </script>--%>
 
     <title>Özel Ders Rezervasyon</title>
 
@@ -58,25 +27,13 @@
                 <div>
                     <h2>En Çok Tercih Edilenler</h2>
 
-                    <asp:GridView ID="GridView1" runat="server" onrowdatabound="GridView1_RowDataBound">
-                       
+                    <asp:GridView ID="GridView1" runat="server" OnRowDataBound="GridView1_RowDataBound">
                     </asp:GridView>
-
 
                 </div>
-               <%-- <div>
-                    <h2>Ders Adına Göre Ara</h2>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="467px" Text="Ara" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
-                    <asp:GridView ID="GridView2" runat="server">
-                    </asp:GridView>
-                </div>--%>
-
-
-
 
             </div>
-            <!-- kenar menü -->
-
+      
             <div class="content">
                 <h2>Oturum aç 
                 </h2>
@@ -116,10 +73,6 @@
 
 
             </div>
-
-
-
-
 
         </div>
 

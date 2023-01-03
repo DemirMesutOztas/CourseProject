@@ -23,14 +23,12 @@
         <div class="wrap">
 
             <div class="content3">
-                 <h3>Eğitmen Kayıt Ekranı</h3>
+                <h3>Eğitmen Kayıt Ekranı</h3>
 
                 <table>
 
-                   
-
                     <tbody>
-                       
+
                         <tr>
                             <td>Adı</td>
                             <td>
@@ -85,7 +83,7 @@
                             <td>Şifre</td>
                             <td>
                                 <asp:TextBox ID="tr_txt_password" runat="server" TextMode="Password"></asp:TextBox>
-                                 <br />
+                                <br />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="tr_txt_password"
                                     ErrorMessage="Zorunlu Alan" ForeColor="Red" Display="Dynamic" Font-Size="XX-Small">
                                 </asp:RequiredFieldValidator>
@@ -96,7 +94,7 @@
                             <td>
                                 <asp:TextBox ID="tr_txt_password2" runat="server" TextMode="Password"></asp:TextBox>
                                 <br />
-                                 <asp:CompareValidator runat="server" ControlToCompare="tr_txt_password" ControlToValidate="tr_txt_password2" 
+                                <asp:CompareValidator runat="server" ControlToCompare="tr_txt_password" ControlToValidate="tr_txt_password2"
                                     ErrorMessage="Şifre eşleşmedi." ForeColor="Red" Display="Dynamic" Font-Size="XX-Small">
                                 </asp:CompareValidator>
                             </td>
@@ -106,19 +104,15 @@
                                 <asp:FileUpload ID="fileUpload1" runat="server" />
                             </td>
                         </tr>
-                       
 
                     </tbody>
 
                 </table>
-                <asp:Button ID="teacher_kaydet" runat="server" Text="Kaydet" OnClick="teacher_kaydet_Click1" Height="45px" Width="116px"  />
+                <asp:Button ID="teacher_kaydet" runat="server" Text="Kaydet" OnClick="teacher_kaydet_Click1" Height="45px" Width="116px" />
 
             </div>
-       
 
         </div>
-
-
 
     </form>
 </body>

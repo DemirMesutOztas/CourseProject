@@ -26,23 +26,18 @@ namespace CourseProject
             sorgula2.Connection = baglan;
 
             sorgula2.Parameters.AddWithValue("@ogretmen", ogrId);
-            
-           
+
+
             SqlDataReader oku = sorgula2.ExecuteReader();
 
             oku.Read();
-            
-                icon.Text = oku["name"].ToString() + " " + oku["surname"].ToString();
 
-            
+            icon.Text = oku["name"].ToString() + " " + oku["surname"].ToString();
+
             oku.Close();
             baglan.Close();
 
-
             SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
-            
-
-
 
         }
 
@@ -55,34 +50,7 @@ namespace CourseProject
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            //Response.Redirect(Request.RawUrl);
-            //baglan.Open();
-
-            //string ogretmenId = Session["teacherId"].ToString();
-            //int ogrId = int.Parse(ogretmenId);
-
-
-            //SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
-
-
-            //SqlCommand cmd = new SqlCommand();
-
-            //string sql = "SELECT student.name, student.surname, [teacherId], [date_choose], [hour], [lessonname], [lessontype], reservationId FROM[reservation] JOIN[student] ON reservation.studentId = student.studentId";
-            //if (!string.IsNullOrEmpty(txtSearch.Text.Trim()))
-            //{
-            //    SqlDataSource1.SelectParameters["teacherId"].DefaultValue = ogretmenId;
-            //    SqlDataSource1.SelectParameters["ogrenci"].DefaultValue = txtSearch.Text;
-            //}
-            //cmd.CommandText = sql;
-            //cmd.Connection = baglan;
-            //SqlDataAdapter sda = new SqlDataAdapter(cmd);
-
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //GridView1.DataSource = dt;
-            //GridView1.DataBind();
-
-            //baglan.Close();
+           
         }
 
         protected void Button2_Click(object sender, EventArgs e)

@@ -22,22 +22,18 @@ namespace CourseProject
         protected void teacher_kaydet_Click1(object sender, EventArgs e)
         {
 
-
-
             SqlCommand sorgu3 = new SqlCommand("select teacherId from teacher where email=@posta", baglanti2);
             sorgu3.Parameters.AddWithValue("@posta", tr_txt_email.Text);
             baglanti2.Open();
 
             sorgu3.Connection = baglanti2;
-
             SqlDataReader dr = sorgu3.ExecuteReader();
 
             string message = "";
             string script = "";
+
             if (dr.Read())
             {
-
-                //Display success message.
                 message = "Aynı e-posta adresine sahip kayıtlı kullanıcı bulunmaktadır!";
                 script = "window.onload = function(){ alert('";
                 script += message;
@@ -61,7 +57,6 @@ namespace CourseProject
                 string saveLocation = Server.MapPath("~/image/") + System.IO.Path.GetFileName(fileUpload1.PostedFile.FileName);
 
                 fileUpload1.PostedFile.SaveAs(saveLocation);
-
 
                 gonder2.CommandText = "INSERT INTO teacher (name, surname, email, age, city, education, branch, password, password_again, photo, information) VALUES('" + tr_txt_adi.Text + "','" + tr_txt_surname.Text + "','" + tr_txt_email.Text +
                                      "','" + tr_txt_age.Text + "','" + tr_txt_city.Text + "','" + tr_txt_education.Text + "','" + tr_txt_branch.Text + "','" + tr_txt_password.Text + "','" +

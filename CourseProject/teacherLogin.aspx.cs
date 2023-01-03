@@ -32,8 +32,7 @@ namespace CourseProject
             if (oku.Read())
             {
                 Session["teacherId"] = oku["teacherId"].ToString();
-                // trlblBilgi.Text = oku["studentId"].ToString();
-
+               
                 string message = "Başarılı bir şekilde oturumunuzu açtınız!";
                 string script = "window.onload = function(){ alert('";
                 script += message;
@@ -45,8 +44,6 @@ namespace CourseProject
                 oku.Close();
                 baglan.Close();
                 baglan.Dispose();
-
-                //Response.Redirect("teacherControl.aspx");
 
             }
             else

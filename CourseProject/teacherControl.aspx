@@ -29,10 +29,10 @@
         <div class="wrap33">
 
             <div class="content33">
-                
+
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="txt"></asp:TextBox>
                 <asp:Button ID="btnSearch" runat="server" Text="Ara" CssClass="buttongr" OnClick="btnSearch_Click" />
-                <asp:Button ID="Button2" runat="server" Text="Temizle" CssClass="buttongr" OnClick="Button2_Click"/>
+                <asp:Button ID="Button2" runat="server" Text="Temizle" CssClass="buttongr" OnClick="Button2_Click" />
                 <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="reservationId" DataSourceID="SqlDataSource1">
                     <Columns>
                         <asp:BoundField DataField="lessontype" HeaderText="Ders Tipi" SortExpression="lessontype" />
@@ -54,7 +54,6 @@
                     </DeleteParameters>
                     <SelectParameters>
                         <asp:Parameter DefaultValue="2" Name="teacherId" Type="Int32" />
-                        <%--<asp:Parameter DefaultValue="2" Name="ogrenci" Type="String" />--%>
                     </SelectParameters>
                     <FilterParameters>
                         <asp:ControlParameter Name="[name]" ControlID="txtSearch" PropertyName="Text" />
@@ -66,10 +65,7 @@
                 </asp:SqlDataSource>
             </div>
 
-
         </div>
-
-
 
     </form>
 </body>
