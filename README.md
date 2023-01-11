@@ -1,4 +1,4 @@
-# BLM4531 Ağ Tabanlı Teknolojiler ve Uygulamlar Dersi Proje Ödevi
+# BLM4531 Ağ Tabanlı Teknolojiler ve Uygulamalar Dersi Proje Ödevi
 ## Demir Mesut Öztaş - 19290760 
 ### CourseProject
 - Özel Ders Rezervasyon Sistemi adlı bir Asp.Net tabanlı web uygulaması geliştirilmiştir.
